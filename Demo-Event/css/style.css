@@ -33,6 +33,37 @@ body {
     font-family: sans-serif;
 }
 
+
+/*
+font-face
+================================================ */
+@font-face {
+    font-family: "BIZUDPGothic-Bold";
+    src: url("font/BIZUDPGothic-Bold.eot");
+    src: url("font/BIZUDPGothic-Bold.eot?#iefix") format("embedded-opentype"),
+        url("font/BIZUDPGothic-Bold.woff") format("woff"),
+        url("font/BIZUDPGothic-Bold.ttf") format("truetype"),
+        url("font/BIZUDPGothic-Bold.svg") format("svg");
+}
+
+@font-face {
+    font-family: "BIZUDPGothic-Regular";
+    src: url("../font/BIZUDPGothic-Regular.eot");
+    src: url("../font/BIZUDPGothic-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../font/BIZUDPGothic-Regular.woff") format("woff"),
+        url("../font/BIZUDPGothic-Regular.ttf") format("truetype"),
+        url("../font/BIZUDPGothic-Regular.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Neutro-Bold";
+    src: url("../font/Neutro-Bold.eot");
+    src: url("../font/Neutro-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../font/Neutro-Bold.woff") format("woff"),
+        url("../font/Neutro-Bold.ttf") format("truetype"),
+        url("../font/Neutro-Bold.svg") format("svg");
+}
+
 /*
 COMMON
 ================================================ */
@@ -411,7 +442,7 @@ FADE
 }
 
 .top_nav li:hover a,
-.top_nav_product li:hover a{
+.top_nav_product li:hover a {
     color: var(--blue);
 }
 
@@ -550,7 +581,7 @@ button {
     height: 100%;
 }
 
-.menu-list a{
+.menu-list a {
     display: block;
 }
 
@@ -561,7 +592,7 @@ button {
     transition: .3s;
 }
 
-.menu-list:hover a{
+.menu-list:hover a {
     color: var(--blue);
 }
 
@@ -1057,7 +1088,7 @@ Profile
     margin-bottom: 2rem;
 }
 
-#profile h3{
+#profile h3 {
     font-size: 1.2rem;
     font-family: 'Neutro', sans-serif;
 
