@@ -39,29 +39,29 @@ font-face
 ================================================ */
 @font-face {
     font-family: "BIZUDPGothic-Bold";
-    src: url("font/BIZUDPGothic-Bold.eot");
-    src: url("font/BIZUDPGothic-Bold.eot?#iefix") format("embedded-opentype"),
-        url("font/BIZUDPGothic-Bold.woff") format("woff"),
-        url("font/BIZUDPGothic-Bold.ttf") format("truetype"),
-        url("font/BIZUDPGothic-Bold.svg") format("svg");
+    src: url("../font/BIZUDPGothic-Bold.eot");
+    src: url("../font/BIZUDPGothic-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../font/BIZUDPGothic-Bold.woff") format("woff"),
+        url("../font/BIZUDPGothic-Bold.ttf") format("truetype"),
+        url("../font/BIZUDPGothic-Bold.svg") format("svg");
 }
 
 @font-face {
     font-family: "BIZUDPGothic-Regular";
-    src: url("font/BIZUDPGothic-Regular.eot");
-    src: url("font/BIZUDPGothic-Regular.eot?#iefix") format("embedded-opentype"),
-        url("font/BIZUDPGothic-Regular.woff") format("woff"),
-        url("font/BIZUDPGothic-Regular.ttf") format("truetype"),
-        url("font/BIZUDPGothic-Regular.svg") format("svg");
+    src: url("../font/BIZUDPGothic-Regular.eot");
+    src: url("../font/BIZUDPGothic-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../font/BIZUDPGothic-Regular.woff") format("woff"),
+        url("../font/BIZUDPGothic-Regular.ttf") format("truetype"),
+        url("../font/BIZUDPGothic-Regular.svg") format("svg");
 }
 
 @font-face {
     font-family: "Neutro-Bold";
-    src: url("../font/Neutro-Bold.eot");
-    src: url("../font/Neutro-Bold.eot?#iefix") format("embedded-opentype"),
-        url("../font/Neutro-Bold.woff") format("woff"),
-        url("../font/Neutro-Bold.ttf") format("truetype"),
-        url("../font/Neutro-Bold.svg") format("svg");
+    src: url("../../font/Neutro-Bold.eot");
+    src: url("../../font/Neutro-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../../font/Neutro-Bold.woff") format("woff"),
+        url("../../font/Neutro-Bold.ttf") format("truetype"),
+        url("../../font/Neutro-Bold.svg") format("svg");
 }
 
 /*
