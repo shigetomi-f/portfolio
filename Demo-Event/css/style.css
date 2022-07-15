@@ -48,11 +48,11 @@ font-face
 
 @font-face {
     font-family: "BIZUDPGothic-Regular";
-    src: url("../font/BIZUDPGothic-Regular.eot");
-    src: url("../font/BIZUDPGothic-Regular.eot?#iefix") format("embedded-opentype"),
-        url("../font/BIZUDPGothic-Regular.woff") format("woff"),
-        url("../font/BIZUDPGothic-Regular.ttf") format("truetype"),
-        url("../font/BIZUDPGothic-Regular.svg") format("svg");
+    src: url("font/BIZUDPGothic-Regular.eot");
+    src: url("font/BIZUDPGothic-Regular.eot?#iefix") format("embedded-opentype"),
+        url("font/BIZUDPGothic-Regular.woff") format("woff"),
+        url("font/BIZUDPGothic-Regular.ttf") format("truetype"),
+        url("font/BIZUDPGothic-Regular.svg") format("svg");
 }
 
 @font-face {
