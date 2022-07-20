@@ -1,0 +1,1429 @@
+@charset 'UTF-8';
+
+/*
+COLORS
+=============================================== */
+:root {
+    --light-blue: #4db1ec;
+    --blue: #1665cc;
+    --purple: #b473bf;
+    --pink: #ffb2c1;
+    --orange: #ff9f67;
+    --yellow: #ffd673;
+    --light-green: #a2e29b;
+    --green: #00a2af;
+    --grey: #333;
+    --transparent: rgba(255, 255, 255, 0);
+    --white: #fff;
+    --k_yellow: #eef929;
+}
+
+/*
+GENERAL STYLING
+================================================ */
+html {
+    /* 1rem = 100pxと定義 */
+    font-size: 100%;
+    /* スムーズスクロール */
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--gray);
+    font-family: sans-serif;
+}
+
+/*
+font-face
+================================================ */
+@font-face {
+    font-family: "PerfectMoment-Script";
+    src: url("../font/PerfectMoment-Script.eot");
+    src: url("../font/PerfectMoment-Script.eot?#iefix") format("embedded-opentype"),
+        url("../font/PerfectMoment-Script.woff") format("woff"),
+        url("../font/PerfectMoment-Script.ttf") format("truetype"),
+        url("../font/PerfectMoment-Script.svg") format("svg");
+}
+
+@font-face {
+    font-family: "KiwiMaru-Light";
+    src: url("../font/KiwiMaru-Light.eot");
+    src: url("../font/KiwiMaru-Light.eot?#iefix") format("embedded-opentype"),
+        url("../font/KiwiMaru-Light.woff") format("woff"),
+        url("../font/KiwiMaru-Light.ttf") format("truetype"),
+        url("../font/KiwiMaru-Light.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Billy Ohio";
+    src: url("../../font/Billy Ohio.eot");
+    src: url("../../font/Billy Ohio.eot?#iefix") format("embedded-opentype"),
+        url("../../font/Billy Ohio.woff") format("woff"),
+        url("../../font/Billy Ohio.ttf") format("truetype"),
+        url("../../font/Billy Ohio.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Billy Ohio";
+    src: url("../../font/Billy Ohio.eot");
+    src: url("../../font/Billy Ohio.eot?#iefix") format("embedded-opentype"),
+        url("../../font/Billy Ohio.woff") format("woff"),
+        url("../../font/Billy Ohio.ttf") format("truetype"),
+        url("../../font/Billy Ohio.svg") format("svg");
+}
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("../../font/Nexa Bold.eot");
+    src: url("../../font/Nexa Bold.eot?#iefix") format("embedded-opentype"),
+        url("../../font/Nexa Bold.woff") format("woff"),
+        url("../../font/Nexa Bold.ttf") format("truetype"),
+        url("../../font/Nexa Bold.svg") format("svg");
+}
+
+
+/*
+COMMON
+================================================ */
+p {
+    line-height: 1.7;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'KiwiMaru-Light', sans-serif;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-family: 'PerfectMoment-Script', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'KiwiMaru-Light', sans-serif;
+
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    font-family: 'KiwiMaru-Light', sans-serif;
+
+}
+
+a {
+    transition: .3s;
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+/* ↓のタグで囲んでるものを中心配置　*/
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+
+/* header,
+h1,
+.hero-date {
+    font-family: impact, sans-serif;
+} */
+
+/* Layout  画面のオブジェクトが広がるマックスサイズ＝wrapper　*/
+.wrapper {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* スクロールトップボタン */
+#js-pagetop {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    /* border-radius: 8px; */
+    bottom: 100px;
+    right: 100px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 60%;
+}
+
+/* スクロールトップボタン */
+.btn-menu {
+    display: none;
+}
+
+/*
+FADE
+================================================ */
+/* jqueryのフェードイン */
+/* スクロールCSS */
+.fade-in {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+}
+
+/* アニメーションをつけたいタグのclassに class="fade-in fade-in-up"で下から上 */
+.fade-in-up {
+    transform: translate(0, 50px);
+}
+
+/* 参考 */
+/* アニメーションをつけたいタグのclassに class="fade-in fade-in-down"で上から下 */
+.fade-in-down {
+    transform: translate(0, -50px);
+}
+
+/* アニメーションをつけたいタグのclassに class="fade-in fade-in-down"で右から左 */
+.fade-in-left {
+    transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+    transform: translate(50px, 0);
+}
+
+.scroll-in {
+    opacity: 10;
+    transform: translate(0, 0);
+}
+
+/* 参考 */
+
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       HOME                                                = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+
+#top {
+    text-align: center;
+}
+
+
+
+
+
+/* SM版ミニタイトル */
+.sm_title_portfolio {
+    /* ポトフォのタイトル文字 */
+    text-align: right;
+    /* font-size: 100px; */
+    font-size: 6vh;
+    color: var(--white);
+    line-height: 1.0;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Billy Ohio', sans-serif;
+    position: absolute;
+    top: 13%;
+    left: 20%;
+
+}
+
+
+/* PC版長タイトル */
+.maison {
+    /* ポトフォのタイトル文字 */
+    text-align: left;
+    /* font-size: 100px; */
+    font-size: 3vh;
+    color: var(--white);
+    line-height: 1.0;
+    overflow: hidden;
+    z-index: 100;
+    font-family: 'Nexa Bold', sans-ser if;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.maison_img{
+    position: absolute;
+    top: 4.2%;
+    left: 2.8%;
+    width: 2%;
+}
+
+.bamble_logo{
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    width: 20%;
+}
+
+
+
+
+.pc_title_portfolio:hover>.span_yellow,
+.sm_title_portfolio:hover>.span_yellow {
+    color: var(--k_yellow);
+}
+
+
+
+
+
+/* ****************************************** 横並びメニューボタン ******************************************  */
+
+/* PC版横並びメニューナビ */
+#top_nav {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    z-index: 20;
+}
+
+
+
+#top_nav li {
+    width: 80px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 70px;
+}
+
+#top_nav li a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'PerfectMoment-Script', sans-serif;
+    /* padding: 20px; */
+}
+
+
+
+
+
+/* ****************************************** 小さくなった時のメニューボタン ******************************************  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    vertical-align: middle;
+    text-align: inherit;
+    font: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/**************** 以下、ハンバーガーボタンのスタイリング ****************/
+.sm_nav {
+    /* ボタンの配置位置  */
+    position: absolute;
+    top: 32px;
+    /* right: 16px; */
+    left: 16px;
+    /* 最前面に */
+    z-index: 10;
+    /* ボタンの大きさ  */
+    width: 48px;
+    height: 48px;
+    background-color: #1665cc;
+    /* ボタンの角の丸さ */
+    border-radius: 30px;
+
+}
+
+/***** 真ん中のバーガー線 *****/
+.sm_nav-line {
+    display: block;
+    /* バーガー線の位置基準として設定 */
+    position: relative;
+    /* 線の長さと高さ */
+    width: 30%;
+    height: 4px;
+    left: 17px;
+    /* バーガー線の色 */
+    background-color: #fff;
+    transition: .2s;
+
+}
+
+/***** 上下のバーガー線 *****/
+.sm_nav-line::before,
+.sm_nav-line::after {
+    content: "";
+    /* 基準線と同じ大きさと色 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.sm_nav-line::before {
+    /* 上の線の位置 */
+    transform: translateY(-16px);
+}
+
+.sm_nav-line::after {
+    /* 下の線の位置 */
+    transform: translateY(16px);
+}
+
+/***** メニューオープン時 *****/
+.sm_nav-line.open {
+    /* 真ん中の線を透明に */
+    background-color: transparent;
+}
+
+.sm_nav-line.open::before,
+.sm_nav-line.open::after {
+    content: "";
+    background-color: rgb(255, 250, 250);
+    transition: .2s;
+}
+
+.sm_nav-line.open::before {
+    /* 上の線を傾ける */
+    transform: rotate(45deg);
+}
+
+.sm_nav-line.open::after {
+    /* 上の線を傾ける */
+    transform: rotate(-45deg);
+}
+
+/**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+/**************** 以下、ハンボタメニューのスタイリング ****************/
+.menu {
+    /* メニューを縦に */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* メニューの位置マイナス指定で画面外に */
+    /* 一覧がにゅっと出る方向 */
+    top: 10%;
+    left: -40%;
+    width: 40%;
+    height: 40vh;
+    background-color: #1665cc;
+    color: #efefef;
+    transition: .3s;
+    z-index: 50;
+}
+
+.menu-list {
+    /* メニューテキスト位置をリスト内中心に */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-list:hover {
+    background-color: #eef929;
+    color: #eef929;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/***** メニューオープン時位置0にして画面内に *****/
+.menu.open {
+    position: absolute;
+    /* 一覧の位置 */
+    left: 0;
+    top: 20%;
+}
+
+
+
+/* ============================================================================================= */
+/* =                                       explain                                                = */
+/* ============================================================================================= */
+
+
+
+#explain {
+    padding-top: 4rem;
+    width: 75%;
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+
+
+#explain2 {
+    background-image: url(images/band2.png);
+    padding-bottom: 2rem;
+}
+
+
+.maru_box {
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+    list-style: none;
+}
+
+/* .maru_band {
+    height: 480px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+} */
+
+/* PC版は自由配置 */
+@media (min-width: 809px) {
+
+    .maru_img1 {
+        position: relative;
+        top: 150px;
+        width: 200px;
+        margin: 0 -2%;
+    }
+
+    .maru_img2 {
+        position: relative;
+        top: 0px;
+        width: 200px;
+    }
+
+    .soap {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0px;
+        width: 400px;
+    }
+}
+
+
+@media (min-width: 660px) and (max-width: 808px) {
+
+    .maru_img1 {
+        position: relative;
+        top: 100px;
+        width: 150px;
+        margin: 5% 0;
+    }
+
+    .maru_img2 {
+        position: relative;
+        top: 0px;
+        width: 150px;
+        margin: 5% 0;
+    }
+
+    .soap {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0px;
+        width: 280px;
+    }
+}
+
+/* SM版は四方配置 */
+@media (max-width: 659px) {
+
+    .maru_img1,
+    .maru_img2 {
+        position: relative;
+        /* top: 0px; */
+        width: 150px;
+        margin: 5% 0;
+    }
+
+    .soap {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0px;
+        width: 280px;
+    }
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+
+
+.maru_1 {
+    /* 正方形を作る */
+    width: 160px;
+    height: auto;
+    /* background: #e61b8c; */
+    /* background: rgb(212, 208, 181); */
+    /* 4つの角を丸める */
+    border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
+}
+
+.maru_2 {
+    /* 正方形を作る */
+    width: 160px;
+    height: auto;
+    background: rgb(212, 208, 181);
+
+    /* 4つの角を丸める */
+    border-radius: 70% 50% 70% 60% / 40% 80% 60% 70%;
+}
+
+
+
+
+
+
+/* ============================================================================================= */
+/* =                                       NEWS                                                = */
+/* ============================================================================================= */
+
+#news {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* 下の＊とかのとこ他影響出そうなので
+NEWSID作って別にしてみる */
+
+.news-list {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+    /* width: 800px; */
+
+}
+
+.news-list .item a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #CCC;
+    padding: 20px 25%;
+    justify-content: center;
+}
+
+.news-list .item:first-child a {
+    border-top: 1px solid #CCC;
+}
+
+.news-list .item .date {
+    margin: 0;
+    min-width: 140px;
+    font-size: 16px;
+    color: rgb(16, 14, 14);
+    padding: 0 0% 0 0%;
+}
+
+.news-list .item .category {
+    margin: 0;
+    min-width: 140px;
+    padding: 0 0px 0 0;
+}
+
+.news-list .item .category span {
+    background: #999;
+    color: #FFF;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.news-list .item .title {
+    margin: 0;
+    width: 100%;
+    min-width: 200px;
+}
+
+.news-list .item a:hover .title {
+    color: #00F;
+}
+
+/* 装飾 */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /* margin: 20px; */
+}
+
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       LINEUP                                             = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+/* プロダクト簡易紹介版歪み丸 ラインナップ */
+
+#lineup {
+    padding: 2rem 1rem;
+    background-image: url(images/band2.png);
+
+}
+
+/* 横帯背景 */
+/* .lineup_band {
+    height: 480px;
+    background-color: #00a2af;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}  */
+
+.lineup_box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+    padding-top: 50px;
+}
+
+/* .lineup_box>h2 {
+    position: absolute;
+    top: 5%;
+    left: 47%;
+} */
+
+.lineup_img {
+    width: 240px;
+}
+
+
+.maru_p1 {
+    /* 正方形を作る */
+    width: 190px;
+    height: auto;
+    /* 4つの角を丸める */
+    border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
+}
+
+.maru_p2 {
+    /* 正方形を作る */
+    width: 190px;
+    height: auto;
+    /* 4つの角を丸める */
+    border-radius: 70% 60% 50% 50% / 50% 60% 70% 80%;
+}
+
+
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       PRODUCT                                             = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+/*
+product
+================================================ */
+#product {
+    padding-top: 100px;
+    width: 75%;
+    /* text-align: center; */
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+#product h1 {
+    margin-bottom: 2rem;
+}
+
+#product h2 {
+    /* font-size: 2rem; */
+    margin-bottom: 2rem;
+}
+
+#product p {
+    text-align: center;
+    /* font-size: 1.5rem; */
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+@media (max-width: 1350px) {
+    #product p {
+        font-size: 100%;
+    }
+}
+
+
+/* flexbox用 */
+
+#product .prd_flex {
+    display: flex;
+    /* gap: 15px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    /* height: 500px; */
+}
+
+/* product説明 */
+.prd_txt_box {
+    background-color: rgba(255, 255, 255, 0.914);
+    max-width: 500px;
+    width: 45%;
+    min-width: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* max-width: 800px; */
+    /* height: 750px; */
+    /* padding: 1%; */
+}
+
+@media (max-width: 1350px) {
+    .prd_txt_box {
+        padding-top: 0px;
+    }
+}
+
+
+@media (min-width: 934px) {
+    .sm_display_none_prd {
+        display: none;
+    }
+}
+
+@media (max-width: 933px) {
+    .pc_display_none_prd {
+        display: none;
+    }
+}
+
+
+
+
+/* product画像 */
+.prd_img_box {
+    max-width: 500px;
+    width: 45%;
+    min-width: 350px;
+    /* max-width: 800px; */
+    /* height: 750px; */
+    /* padding: 1%; */
+}
+
+.furo_img {
+    width: 30%;
+    min-width: 200px;
+    /* max-width: 800px; */
+    /* height: 750px; */
+    padding: 1%;
+}
+
+.furo_txt {
+    width: 30%;
+    min-width: 300px;
+    /* max-width: 800px; */
+    /* height: 750px; */
+    margin-top: 3%;
+    padding: 1%;
+}
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       about                                             = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+/*
+about
+================================================ */
+
+
+
+#about {
+    padding: 6rem 0rem;
+    /* margin: 0 auto; */
+
+}
+
+#about span {
+    background-color: rgba(84, 104, 63, 0.914);
+    /* font-size: 1rem; */
+    line-height: -3px;
+}
+
+#about h2 {
+    /* font-size: 2rem; */
+    margin-bottom: 2rem;
+}
+
+/* flexbox用 */
+#about .sasu_flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+/* 画像 */
+.sasu_img_box {
+    /* max-width: 300px; */
+    width: 33.333%;
+    min-width: 350px;
+}
+
+@media (max-width: 600px) {
+    .sasu_img_box {
+        width: 100%;
+    }
+}
+
+/* 説明 */
+.sasu_img_box>p {
+    /* background-color: rgba(255, 255, 255, 0.914); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #efefef;
+    font-size: 1.3rem;
+
+    /* max-width: 300px;
+    width: 45%;
+    min-width: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px; */
+}
+
+@media (max-width: 1350px) {
+    .sasu_txt_box {
+        padding-top: 0px;
+    }
+}
+
+
+
+.about-list1 {
+    display: flex;
+    align-items: flex-start;
+    /* margin-bottom: 2rem; */
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+}
+
+.about-list1>li {
+    width: 80px;
+}
+
+
+/* ============================================================================================= */
+/* =                                      SHOPPING                                             = */
+/* ============================================================================================= */
+
+#shopping {
+    /* text-align: center; */
+    margin-bottom: 6rem;
+
+
+}
+
+#shopping .shop_flex {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.shop_box {
+    height: 300px;
+    width: 250px;
+    /* margin-bottom: 2rem; */
+    /* border-radius: 100px; */
+}
+
+#shopping h2{
+    /* font-size: 2rem; */
+    margin-bottom: 3rem;
+    /* font-family: 'KiwiMaru-Light', sans-serif; */
+}
+
+/* #shopping h3 {
+    font-size: 1.5rem;
+    margin-top: -1.0rem;
+    font-family: 'ヒラギノ丸ゴ ProN W4', sans-serif;
+} */
+
+#shopping p{
+    font-size: 1rem;
+}
+
+/* 購入ボタン */
+.btn-coler.btn-cubic {
+    border-bottom: 5px solid rgb(33, 32, 32);
+    color: rgb(131, 128, 128);
+
+}
+
+.btn-coler.btn-cubic:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid rgb(33, 32, 32);
+    color: rgb(239, 235, 235);
+
+}
+
+.btn-radius {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(73, 72, 72);
+    border-radius: 80vh;
+}
+
+.fa-position-right {
+    position: absolute;
+    top: calc(50% - .5em);
+    right: 1rem;
+}
+
+
+/* ============================================================================================= */
+/* =                                      ACCESS                                             = */
+/* ============================================================================================= */
+
+#access {
+    text-align: center;
+
+}
+
+#access h2{
+    margin-bottom: 2rem;
+}
+
+/* ============================================================================================= */
+/* =                                       SNS                                             = */
+/* ============================================================================================= */
+
+
+#sns {
+    padding: 4rem 1rem;
+}
+
+
+.sns-list1 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sns-list1>sns-sentence {
+    margin-left: 1rem;
+    width: 400px;
+    text-align: center;
+
+
+}
+
+.sns_box1 {
+    /* background-color: #f2f4f8c8; */
+    width: 700px;
+    height: 250px;
+}
+
+#sns img {
+    /* border-radius: 15px; */
+    width: 120px;
+    margin: 20px;
+
+    flex-wrap: wrap;
+}
+
+/* .sns-sentence>img {
+    width: 80px;
+    margin: 20px;
+
+} */
+
+.sns-sentence>p {
+    line-height: 1.7;
+    /* text-align: center;   */
+    margin-left: 1rem;
+    width: 400px;
+    flex-wrap: wrap;
+
+}
+
+
+
+/* テスト */
+
+.Form {
+    /* margin-top: 80px; */
+    margin-top: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}
+
+.Form-Item {
+
+    /* padding-top: 24px; */
+    /* padding-bottom: 24px; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.Form-Item:nth-child(5) {}
+
+.Form-Item-Label {
+    width: 100%;
+    /* max-width: 248px; */
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+
+    /* font-size: 18px; */
+}
+
+.Form-Item-Label.isMsg {
+    margin-top: 8px;
+    margin-bottom: auto;
+}
+
+.Form-Item-Label-Required {
+    /* border-radius: 6px; */
+    margin-right: 8px;
+    /* padding-top: 8px; */
+    /* padding-bottom: 8px; */
+    /* width: 48px; */
+    display: inline-block;
+    text-align: center;
+    background: #545454;
+    color: #fff;
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+    /* font-size: 14px; */
+}
+
+.Form-Item-Input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    /* margin-left: 40px; */
+    padding-left: 1em;
+    padding-right: 1em;
+    /* height: 48px; */
+    /* flex: 1; */
+    width: 100%;
+    max-width: 410px;
+    background: #eaedf2;
+    /* font-size: 18px; */
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+}
+
+.Form-Item-Textarea {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    /* margin-left: 40px; */
+    padding-left: 1em;
+    padding-right: 1em;
+    /* height: 216px; */
+    /* flex: 1; */
+    width: 100%;
+    max-width: 410px;
+    background: #eaedf2;
+    /* font-size: 18px; */
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+}
+
+.Form-Btn {
+    border-radius: 6px;
+    /* margin-top: 32px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    /* width: 280px; */
+    display: block;
+    letter-spacing: 0.05em;
+    background: #545454;
+    color: #fff;
+    font-weight: bold;
+    /* font-size: 20px; */
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+}
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       CONTACT                                             = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+/*
+contact
+================================================ */
+#contact {
+    /* background-image: linear-gradient(var(--blue), var(--blue));
+    padding: 6rem 1rem 2rem; */
+    background-image: url(images/under.png);
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+#contact h1 {
+    color: var(--white);
+}
+
+.contact-form {
+    max-width: 480px;
+    margin: 0 auto 5rem;
+}
+
+.contact-form label {
+    color: var(--white);
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.contact-field {
+    background: rgba(255, 255, 255, .6);
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.contact-btn {
+    background: var(--grey);
+    color: var(--white);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/*
+FOOTER
+================================================ */
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: .875rem;
+    color: var(--white);
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+
+/*
+DESKTOP SIZE ＜PC＞
+================================================ */
+@media (min-width: 600px) {
+
+    /* Common */
+    h1 {
+        font-size: 6rem;
+    }
+
+    .contact-btn:hover {
+        transition: .3s;
+    }
+
+    .contact-btn:hover {
+        background: var(--blue);
+    }
+
+    /* Header */
+    .main-nav {
+        width: 100%;
+        position: static;
+        display: flex;
+    }
+
+    .main-nav li {
+        margin: 0 0 0 1.5rem;
+    }
+
+    /* TOP */
+    /* #top h1 {
+        font-size: 6.875rem;
+    } */
+
+    /* .hero-date {
+        font-size: 3rem;
+    } */
+
+    /* home */
+    .home-table td {
+        display: table-cell;
+    }
+
+    .home-date {
+        padding: 1.125rem 0 1rem 1rem;
+    }
+
+    .home-content {
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    /* about */
+    /* #about h1 {
+        margin-bottom: 4rem;
+    } */
+
+    .about-list {
+        margin-bottom: 3rem;
+    }
+
+    .about-text {
+        margin-left: 2rem;
+    }
+
+    /* ハンバーガーボタン非表示*/
+    /* .sm_nav {
+        display: none;
+    } */
+
+    .menu {
+        display: none;
+    }
+
+    /* ミニタイトル非表示*/
+    .pc_display_none {
+        display: none;
+    }
+
+    /* 縦長トップ画像非表示 */
+    .sm_top_bamble {
+        display: none;
+    }
+
+
+    /* 竹酢上配置画像非表示 */
+    .no_pc {
+        display: none;
+    }
+
+}
+
+/*
+DESKTOP SIZE ＜SM＞
+================================================ */
+@media (max-width: 599px) {
+
+    /* 横並びナビ非表示*/
+    .top_nav {
+        display: none;
+    }
+
+    .sm_display_none {
+        display: none;
+    }
+
+    /* 横長トップ画像非表示 */
+    .top_bamble {
+        display: none;
+    }
+
+    /* NEWS */
+    .news-list .item a {
+        flex-wrap: wrap;
+    }
+
+    .news-list .item .date {
+        min-width: 100px;
+    }
+
+    .news-list .item .title {
+        margin-top: 10px;
+    }
+
+    /* 竹酢上配置画像非表示 */
+    .no_pc {
+        display: none;
+    }
+
+}
