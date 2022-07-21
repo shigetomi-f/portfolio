@@ -56,28 +56,28 @@ font-face
 
 @font-face {
     font-family: "Billy Ohio";
-    src: url("../../font/Billy Ohio.eot");
-    src: url("../../font/Billy Ohio.eot?#iefix") format("embedded-opentype"),
-        url("../../font/Billy Ohio.woff") format("woff"),
-        url("../../font/Billy Ohio.ttf") format("truetype"),
-        url("../../font/Billy Ohio.svg") format("svg");
+    src: url("../font/Billy Ohio.eot");
+    src: url("../font/Billy Ohio.eot?#iefix") format("embedded-opentype"),
+        url("../font/Billy Ohio.woff") format("woff"),
+        url("../font/Billy Ohio.ttf") format("truetype"),
+        url("../font/Billy Ohio.svg") format("svg");
 }
 
 @font-face {
     font-family: "Billy Ohio";
-    src: url("../../font/Billy Ohio.eot");
-    src: url("../../font/Billy Ohio.eot?#iefix") format("embedded-opentype"),
-        url("../../font/Billy Ohio.woff") format("woff"),
-        url("../../font/Billy Ohio.ttf") format("truetype"),
-        url("../../font/Billy Ohio.svg") format("svg");
+    src: url("../font/Billy Ohio.eot");
+    src: url("../font/Billy Ohio.eot?#iefix") format("embedded-opentype"),
+        url("../font/Billy Ohio.woff") format("woff"),
+        url("../font/Billy Ohio.ttf") format("truetype"),
+        url("../font/Billy Ohio.svg") format("svg");
 }
 @font-face {
     font-family: "Nexa Bold";
-    src: url("../../font/Nexa Bold.eot");
-    src: url("../../font/Nexa Bold.eot?#iefix") format("embedded-opentype"),
-        url("../../font/Nexa Bold.woff") format("woff"),
-        url("../../font/Nexa Bold.ttf") format("truetype"),
-        url("../../font/Nexa Bold.svg") format("svg");
+    src: url("../font/Nexa Bold.eot");
+    src: url("../font/Nexa Bold.eot?#iefix") format("embedded-opentype"),
+        url("../font/Nexa Bold.woff") format("woff"),
+        url("../font/Nexa Bold.ttf") format("truetype"),
+        url("../font/Nexa Bold.svg") format("svg");
 }
 
 
