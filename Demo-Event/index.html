@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="images/favicon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-    <link rel="icon" type="image/svg+xml" href="images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.jpg">
 
 
     <!-- CSS -->
@@ -30,20 +30,18 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 
-
 </head>
 
 <!-- 背景固定して文字スクロール -->
-<!-- 背景画像 -->
 
-<body background="images/home_back.png" style="background-attachment:fixed">
+<body background="images/home_back.jpg" style="background-attachment:fixed">
 </body>
 
 <!-- スクロールトップボタン -->
 <div id="js-pagetop">
     <img src="images/UP_B.png">
 </div>
-<!-- 下の行がないとスクロールボタンが消えてくれません涙 -->
+<!-- 下の行がないとスクロールボタンが消えてくれません -->
 <button class="btn-menu"></button>
 
 <body>
@@ -62,65 +60,71 @@
 
     <!-- home トップの画像。タイトル、説明文字 -->
     <section id="top">
-        <!-- トップMAISONMARLOロゴ -->
-        <div>
-            <a class="maison" href="#top">
-                MAISON MARLO
+        <!-- トップPOTOFORIO文字 -->
+        <div class="sm_display_none">
+            <a class="pc_title_portfolio" href="#top">
+                PORTFOLIO<br>
+                PORTFOLIO<br>
+                <span class="span_yellow">PORTFOLIO<br></span>
+                PORTFOLIO<br>
             </a>
-            <img class="maison_img" src="images/maison.png">
-
         </div>
 
-        <!-- トップbamleロゴ -->
-        <div class="bamble_logo"><img src="images/logo.png"></div>
+        <div class="pc_display_none">
+            <a class="sm_title_portfolio" href="#top">
+                PORT<br>
+                FORIO<br>
+                <span class="span_yellow">PORT<br></span>
+                FORIO<br>
 
-
+            </a>
+        </div>
 
         <!-- PC版横並びメニューナビ -->
-        <!-- <div class="sm_display_none sm_nav js-sm_nav"> -->
-        <div class=" ">
-            <ul id="top_nav">
+        <div class="sm_display_none">
+            <ul class="top_nav">
                 <li><a href="index.html#">HOME</a></li>
-                <li><a href="about.html#">ABOUT</a></li>
-                <li><a href="shop.html#">SHOP</a></li>
-                <li><a href="access.html#">ACCESS</a></li>
-
+                <li><a href="product.html#">PRODUCT</a></li>
+                <li><a href="profile.html#">PROFILE</a></li>
             </ul>
         </div>
+
+        <!-- ジャンプシールボタン -->
+        <!-- PC用 -->
+        <div class="sm_display_none">
+            <a class="top-home" href="index.html#"><img src="images/homeB_HOME.png"
+                    alt="home"></a>
+            <a class="top-product" href="index.html#product"><img
+                    src="images/homeB_PRODUCT.png" alt="product"></a>
+            <a class="top-profile" href="index.html#profile"><img
+                    src="images/homeB_profile.png" alt="profile"></a>
+        </div>
+        <!-- SM用 -->
+        <div class="pc_display_none">
+            <a class="sm_top-home" href="index.html#"><img src="images/homeB_HOME.png"
+                    alt="home"></a>
+            <a class="sm_top-product" href="index.html#product"><img
+                    src="images/homeB_PRODUCT.png" alt="product"></a>
+            <a class="sm_top-profile" href="index.html#profile"><img
+                    src="images/homeB_profile.png" alt="profile"></a>
+        </div>
+
 
 
         <!-- 小さくなったときのメニューボタン -->
-        <!-- <div class="sm_display_none">
-            <ul id="top_nav">
-                <li><a href="index.html#">HOME</a></li>
-                <li><a href="about.html#">ABOUT</a></li>
-                <li><a href="shop.html#">SHOP</a></li>
-                <li><a href="access.html#">ACCESS</a></li>
-
-            </ul>
-        </div>
- -->
-
-        <!-- <button type="button" class="sm_nav js-sm_nav">
+        <button type="button" class="sm_nav js-sm_nav">
             <span class="sm_nav-line"></span>
         </button>
         <nav>
             <ul class="menu">
                 <li class="menu-list"><a href="index.html#">HOME</a> </li>
-                <li class="menu-list"><a href="about.html#about">ABOUT</a> </li>
-                <li class="menu-list"><a href="shop.html#about">SHOP</a> </li>
-                <li class="menu-list"><a href="access.html#about">ACCESS</a> </li>
+                <li class="menu-list"><a href="product.html#product">PRODUCT</a> </li>
+                <li class="menu-list"><a href="profile.html#profile">PROFILE</a> </li>
             </ul>
         </nav>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="script.js"></script> -->
-
-        <!-- トップ石鹸画像 -->
-
-        <div class="top_bamble"><img src="images/bamble.png" width="120%"></div>
-        <div class="sm_top_bamble"><img src="images/sm_bamble.png" width="120%"></div>
-
+        <script src="script.js"></script>
 
 
     </section>
@@ -128,152 +132,25 @@
 
 
 
-
     <!-- ************************************************************************************* -->
     <!-- *                                                                                   * -->
-    <!-- *                                    explain                                        * -->
+    <!-- *                                    PRODUCT                                        * -->
     <!-- *                                                                                   * -->
     <!-- ************************************************************************************* -->
 
-    <!-- ******************************** ▽ explainゾーン　▽ ********************************-->
 
 
-    <section id="explain">
-        <h2>BAMBLE の優しい泡に<br>
-            埋もれてみる…</h2>
-        <h3>BAMBLEは竹酢液を配合した天然由来の炭竹石鹸です</h3>
-        <p>BAMBLEにはお肌が元気になる様々な優しい効能があります<br>
-            竹酢特有のスモーキーな香りであなたのバスタイムを特別なものに</p><br><br>
+    <!-- ******************************** ▽ Productゾーン　▽ ********************************-->
+
+
+    <section id="product_top">
+        <div class="img_product"><img src="images/homeB_product.png" alt="profile_b"></div>
+        <h1>product</h1>
     </section>
 
-    <section id="explain2">
-        <br><br>
-
-        <div class="maru_box">
-            <div class="maru_img1">
-                <img src="images/nuri.png" class="maru_1">
-                <p class="center">肌質<br>改善</p>
-            </div>
-            <div class="maru_img2">
-                <img src="images/nuri.png" class="maru_2">
-                <p class="center">抗酸化<br>作用</p>
-            </div>
-            <div class="maru_img2">
-                <img src="images/nuri.png" class="maru_1">
-                <p class="center">高保湿<br>効果</p>
-            </div>
-            <div class="maru_img1">
-                <img src="images/nuri.png" class="maru_2">
-                <p class="center">殺菌<br>作用</p>
-            </div>
-        </div>
-
-
-        <div class="soap">
-            <img src="images/soap.png">
-        </div>
-
-    </section>
-
-
-    <!-- ************************************************************************************* -->
-    <!-- *                                    NEWS                                           * -->
-    <!-- ************************************************************************************* -->
-
-    <section id="news">
-        <h1>NEWS</h1>
-
-        <ul class="news-list">
-            <li class="item">
-                <a href="#">
-                    <p class="date">2020/4/15</p>
-                    <p class="category"><span>お知らせ</span></p>
-                    <p class="title">公式Webサイトがリニューアルしました！</p>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <p class="date">2020/4/15</p>
-                    <p class="category"><span>お知らせ</span></p>
-                    <p class="title">2022/08/18~2022/08/23は店舗での販売をお休みさせていただきます。</p>
-                    <!-- <p class="title">2022年08月18日から2022年08月23日は店舗での販売をお休みさせていただきます。</p> -->
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <p class="date">2020/4/15</p>
-                    <p class="category"><span>お知らせ</span></p>
-                    <p class="title">オーガニック石鹸をオリジナル配合で作ろう！ワークショップ開催決定！</p>
-                </a>
-            </li>
-        </ul>
-
-    </section>
-
-
-    <!-- ************************************************************************************* -->
-    <!-- *                                                                                   * -->
-    <!-- *                                     LINEUP                                      * -->
-    <!-- *                                                                                   * -->
-    <!-- ************************************************************************************* -->
-
-    <section id="lineup">
-        <!-- <h1></h1> -->
-        <h2>lineup</h2>
-        <div class="lineup_box">
-            <span class="lineup_img">
-                <li>
-                    <!-- <span class="maru_img"> -->
-                    <img src="images/kuro.png" class="maru_p1">
-                    <!-- </span> -->
-                    <h3>soap</h3><br>
-                    <p>
-                        優しい泡で肌トラブルを改善します
-                        オーガニックな人と地球に優しい石鹸です
-                    </p>
-                </li>
-            </span>
-            <span class="lineup_img">
-                <li>
-                    <!-- <span class="maru_img"> -->
-                    <img src="images/liquid.png" class="maru_p2">
-                    <!-- </span> -->
-                    <h3>liquid</h3><br>
-                    <p>
-                        竹酢による様々な効能を直に感じられます
-                        お風呂に入れて湯冷め対策、肌質改善にも
-                    </p>
-                </li>
-            </span>
-            <span class="lineup_img">
-                <li>
-                    <!-- <span class="maru_img"> -->
-                    <img src="images/toner.png" class="maru_p1">
-                    <!-- </span> -->
-                    <h3>toner</h3><br>
-                    <p>
-                        竹酢液パワーでお肌がふっくらと潤う肌に
-                        みんなが安心して使用できる高保湿化粧水です
-                    </p>
-                </li>
-            </span>
-        </div>
-    </section>
-
-    <!-- ************************************************************************************* -->
-    <!-- *                                                                                   * -->
-    <!-- *                                     PRODUCT                                      * -->
-    <!-- *                                                                                   * -->
-    <!-- ************************************************************************************* -->
-
-    <!-- ************************************************************************************* -->
-    <!-- *                                    効果説明                                        * -->
-    <!-- ************************************************************************************* -->
-
-
-    <section id="product">
-        <h1>PRODUCT</h1>
-
+    <section id="product" class="wrapper">
+        <!-- プロダクトポートフォリオポップアップ -->
+        <!-- ポトフォ -->
         <style>
             .flex {
                 display: flex;
@@ -286,91 +163,287 @@
         </style>
         <!-- flex：位置調節系 fade-in fade-in-up：スクロールでフェードイン -->
 
+        <!-- ************************************************************************************* -->
+        <!-- *                                      web                                         * -->
+        <!-- ************************************************************************************* -->
 
-
+        <h2>Webサイト制作</h2>
 
         <div class="prd_flex">
-            <div class="prd_img_box fade-in fade-in-up">
-                <img src="images/sumi.png">
-            </div>
-            <div class="prd_txt_box fade-in fade-in-up">
-                <h3><br>竹炭のやさしさ</h3>
+            <div class="prd_box fade-in fade-in-up">
+                <h3>ポートフォリオサイト</h3>
+                <div class="img_web_position">
+                    <a href="images/hoken.png" data-lightbox="group_potfo"><img src="images/hoken.png" width="400"></a>
+                    <a href="images/hoken_de.png" data-lightbox="group_potfo"></a>
+                    <a href="images/hoken_tab.png" data-lightbox="group_potfo"></a>
+                    <a href="images/hoken_sm.png" data-lightbox="group_potfo"></a>
+                </div>
+                <div class="prd_box_title">-----------URL-----------<br>
+                    デザイン / Adobe XD / illustrator / photoshop / HTML / CSS / jQuery<br></div>
                 <p>
-                    竹炭は木炭に比べて微細孔多く、弱アルカリ性を有している特徴があります。
-                    そのため、吸着効果が高いのはもちろんのこと、肌にとても優しい素材です。
-                    人間の体液濃度は、常にpH7.35～7.45の弱アルカリ性に保たれています。
-                    これは、全身の細胞が、この範囲内でしか機能を発揮できないからです。
-                    そのため、体に優しいアルカリ性、竹炭の微粒子でマッサージするという相乗効果で肌の細胞が常に最適で健康な状態を保つことができるのです。<br>
+                    webデザインのプロダクトをまとめたサイトです。<br>
+                </p>
+            </div>
+            <div class="prd_box fade-in fade-in-up">
+                <h3>BAMBLE（架空石鹸サイト）</h3>
+                <div class="img_web_position">
+                    <a href="images/bamble.png" data-lightbox="group_bamble"><img src="images/bamble.png"
+                            width="400"></a>
+                    <a href="images/bamble_de.png" data-lightbox="group_bamble"></a>
+                    <a href="images/bamble_tab.png" data-lightbox="group_bamble"></a>
+                    <a href="images/bamble_sm.png" data-lightbox="group_bamble"></a>
+                </div>
+                <div class="prd_box_title">-----------URL-----------<br>
+                    デザイン / Adobe XD / illustrator / photoshop / HTML / CSS / jQuery<br></div>
+                <p>
+                    竹酢石鹸の架空サイトです。<br><br>
+                    ターゲット<br>
+                    20代〜30代、敏感肌、オーガニック派の男女<br>
+                </p>
+            </div>
+            <div class="prd_box fade-in fade-in-up">
+                <h3>安衛生命（架空保険サイト）</h3>
+                <div class="img_web_position">
+                    <a href="images/hoken.png" data-lightbox="group_hoken"><img src="images/hoken.png" width="400"></a>
+                    <a href="images/hoken_de.png" data-lightbox="group_hoken"></a>
+                    <a href="images/hoken_tab.png" data-lightbox="group_hoken"></a>
+                    <a href="images/hoken_sm.png" data-lightbox="group_hoken"></a>
+                </div>
+                <div class="prd_box_title">デザイン / Adobe XD / illustrator / photoshop<br></div>
+                <p>
+                    保険プランの架空サイトです。<br><br>
+                    ターゲット<br>
+                    20代後半〜30代、保険を始めたいけど迷っている働く男女<br>
+                </p>
+            </div>
+            <div class="prd_box fade-in fade-in-up">
+                <h3>FM party（パーティー企画サイト）</h3>
+                <div class="img_web_position">
+                    <a href="images/party.png" data-lightbox="group_party"><img src="images/party.png" width="400"></a>
+                    <a href="images/party_de.png" data-lightbox="group_party"></a>
+                    <a href="images/party_tab.png" data-lightbox="group_party"></a>
+                    <a href="images/party_sm.png" data-lightbox="group_party"></a>
+                </div>
+                <div class="prd_box_title">デザイン / Adobe XD / illustrator / photoshop<br></div>
+                <p>
+                    パーティーの設営を委託できる企業の架空サイトです。<br><br>
+                    ターゲット<br>
+                    10代後半〜30代前半の女性、学生、30代子持ち主婦<br>
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- ************************************************************************************* -->
+        <!-- *                                      ui                                         * -->
+        <!-- ************************************************************************************* -->
+        <h2>UIデザイン制作</h2>
+
+        <div class="prd_flex">
+            <!-- nut -->
+            <div class="prd_ui_box fade-in fade-in-up">
+                <h3>NUTpaly</h3>
+                <div class="img_ui_position">
+                    <a href="images/nut.png" data-lightbox="group"><img src="images/nut.png" width="400"></a>
+                </div>
+                <p>
+                    音楽配信サービスの再生画面<br><br>
+                    ターゲット<br>
+                    アウトドアで自然や温かみのあるものが好きな<br>20代〜40代男女<br>
+                </p>
+            </div>
+
+            <!-- rooms -->
+            <div class="prd_ui_box fade-in fade-in-up">
+                <h3>rooms</h3>
+                <div class="img_ui_position">
+                    <a href="images/rooms.png" data-lightbox="group"><img src="images/rooms.png" width="400"></a>
+                </div>
+                <p>
+                    スマート家電を一括したアプリの部屋の光調節画面<br><br>
+                    ターゲット<br>
+                    新しいことに関心が強く、便利な暮らしで生活を<br>まとめたい20代〜30代、男女<br>
                 </p>
             </div>
         </div>
 
 
-        <div class="pc_display_none_prd">
-            <div class="prd_flex">
-                <div class="prd_txt_box fade-in fade-in-up">
-                    <h3><br>竹酢液のやさしさ</h3>
-                    <p>
-                        竹酢液の主成分は酢酸ですが、他にもポリフェノール類など200種類以上有機成分を含んでおり、これらが更にお肌に嬉しい様々な効能をもたらします。
-                        成分の中には強力な抗酸化作用や抗菌作用もあり、かゆみを引き起こす黄色ブドウ球菌に対しての殺菌力に大変優れているため、
-                        毎日使い続けることで肌質が良くなっていくのを実感できます。
-                        敏感肌の方は勿論、赤ちゃんからアトピーの方まで安心して使用できる石鹸なのです。<br>
-                    </p>
+        <div class="prd_flex">
+            <!-- 瞬FX -->
+            <div class="prd_ui_box fade-in fade-in-up">
+                <h3>瞬FX</h3>
+                <div class="img_ui_position">
+                    <a href="images/fx.png" data-lightbox="group"><img src="images/fx.png" width="400"></a>
                 </div>
-                <div class="prd_img_box fade-in fade-in-up">
-                    <img src="images/chiku.png">
+                <p>
+                    スマホ株アプリの株価状況を確認できる画面<br><br>
+                    ターゲット<br>
+                    気長にコツコツと資産運用をしたい<br>20代後半50代前半男性<br>
+                </p>
+            </div>
+            <!-- favspace -->
+            <div class="prd_ui_box fade-in fade-in-up">
+                <h3>favspace</h3>
+                <div class="img_ui_position">
+                    <a href="images/fav.png" data-lightbox="group"><img src="images/fav.png" width="400"></a>
                 </div>
+                <p>
+                    家具のネットショップアプリのAR機能画面<br><br>
+                    ターゲット<br>
+                    プライベートの時間にこだわりを持つ30代〜50代男女<br>
+                </p>
             </div>
         </div>
 
-        <div class="sm_display_none_prd">
-            <div class="prd_flex">
-                <div class="prd_img_box fade-in fade-in-up">
-                    <img src="images/chiku.png">
-                </div>
-                <div class="prd_txt_box fade-in fade-in-up">
-                    <h3><br>竹酢液のやさしさ</h3>
-                    <p>
-                        竹酢液の主成分は酢酸ですが、他にもポリフェノール類など200種類以上有機成分を含んでおり、これらが更にお肌に嬉しい様々な効能をもたらします。
-                        成分の中には強力な抗酸化作用や抗菌作用もあり、かゆみを引き起こす黄色ブドウ球菌に対しての殺菌力に大変優れているため、
-                        毎日使い続けることで肌質が良くなっていくのを実感できます。
-                        敏感肌の方は勿論、赤ちゃんからアトピーの方まで安心して使用できる石鹸なのです。<br>
-                    </p>
-                </div>
-            </div>
+        <!-- </div> -->
+
+        <!-- productのmoreボタン -->
+        <div class="fade-in fade-in-up">
+            <p style="text-align: right">
+                <a class="" href="index.html#product"><img src="images/homeB_product.png"
+                        alt="product"></a>
+            </p>
         </div>
 
-        <br>
-        <br>
+    </section>
+
+    <!-- ******************************** △ Productゾーン △ ********************************-->
 
 
 
     <!-- ************************************************************************************* -->
     <!-- *                                                                                   * -->
-    <!-- *                                    お問い合わせ                                       * -->
+    <!-- *                                     PROFILE                                       * -->
     <!-- *                                                                                   * -->
     <!-- ************************************************************************************* -->
 
 
-<!-- 
+    <!-- oooooooooooooooooooooooooooooooo ▽ Profileゾーン　▽ oooooooooooooooooooooooooooooooo -->
 
-    <div class="Form">
-        <div class="Form-Item">
-            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
-            <input type="text" id='n_data' class="Form-Item-Input" placeholder="例）山田太郎">
+    <section id="profile_top">
+        <div class="img_profile"><img src="images/homeB_profile.png" alt="profile_b">
         </div>
-        <div class="Form-Item">
-            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
-            <input type="email" id='m_data' class="Form-Item-Input" placeholder="例）example@gmail.com">
-        </div>
-        <div class="Form-Item">
-            <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-            <textarea type="text" id='o_data' class="Form-Item-Textarea"></textarea>
-        </div>
-        <input type="submit" class="Form-Btn" value="送信する">
-    </div>
- -->
+        <h1>profile</h1>
+    </section>
 
+
+    <!-- ************************************************************************************* -->
+    <!-- *                                      skill                                        * -->
+    <!-- ************************************************************************************* -->
+
+    <section id="skill" class="wrapper">
+
+        <h2>Webサイト制作</h2>
+
+        <div class="gridA">
+            <div class="skill_box fade-in fade-in-up">
+
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill1.PNG" alt=""></div>
+                <p class="skill_sentence">Illustratorの基本操作<br><br>
+                    Illustratorを使用したロゴやアイコン、バナー、文字装飾などの作成。</p>
+            </div>
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill2.PNG" alt=""></div>
+                <p class="skill_sentence">photoshopの基本操作。<br><br>
+                    photoshopを使用した写真の加工や補正、切り抜きなどの編集</p>
+            </div>
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill3.PNG" alt=""></div>
+                <p class="skill_sentence">Adobe XDの基本操作。<br><br>
+                    Adobe XDを使用した簡単なwebデザイン制作。
+                </p>
+            </div>
+
+        </div>
+        <br>
+        <div class="gridA">
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill4.PNG" alt=""></div>
+                <p class="skill_sentence">フロント側の改修案件を担当した経験があるため、基本的なコーディングが可能。</p>
+            </div>
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill5.PNG" alt=""></div>
+                <p class="skill_sentence">jqueryを使用した基本的なコーディングが可能。</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ************************************************************************************* -->
+    <!-- *                                      自己紹介                                         * -->
+    <!-- ************************************************************************************* -->
+
+    <section id="profile" class="wrapper">
+        <!-- <h1>profile</h1> -->
+        <div class="profile-list1">
+            <div class="profile_box1 profile-sentence">
+                <h2>こんにちは。”しげとみ” と申します。</h2>
+                <h3>HOBBY<br></h3>
+                <img src="images/pro1.png" alt="bike" width="180%">
+                <img src="images/pro2.png" alt="run">
+                <img src="images/pro3.png" alt="party"><br>
+                <img src="images/pro4.png" alt="art">
+                <img src="images/pro5.png" alt="camp">
+                <p>
+                    以前は、音楽フェスや海外旅行などによく行ってましたが、<br>
+                    コロナになってからは自然をよく満喫するようになりました。
+                </p>
+            </div>
+            <img src="images/mie.jpg" alt="mie" >
+        </div>
+        
+        <!-- ************************************************************************************* -->
+        <!-- *                                      職歴                                         * -->
+        <!-- ************************************************************************************* -->
+
+        <div class="profile-list2">
+            <!-- <h2>Miechi</h2> -->
+            <div class="profile_box2 profile-sentence">
+                <span class="circle">
+                    2018-
+                </span>
+                <span class="circle_sentence">
+                    <span>放送系システム<br>システム開発<br></span>
+                    主な担当業務：<br>
+                    システム開発、保守<br>
+                    XXXX:Java、SQL、html、css等</span>
+            </div>
+            <br>
+            <div class="profile_box2 profile-sentence">
+                <span class="circle">
+                    2020-
+                </span>
+                <span class="circle_sentence">
+                    <span> 放送系システム<br>システム移行<br></span>
+                    主な担当業務：<br>
+                    GCP環境構築、移行業務
+                    XXXX:GCP、Linux、bash、等</span>
+                    管理経験:進捗関連管理<br>
+                </span>
+            </div>
+            <br>
+            <div class="profile_box2 profile-sentence">
+                <span class="circle">
+                    2022-
+                </span>
+                <span class="circle_sentence">
+                    <span>銀行系システム<br>基盤構築<br></span>                   
+                    主な担当業務：<br>
+                    オンプレミス環境構築
+                    XXXX:HPUX、Linux、OracleDB、bash等</span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- oooooooooooooooooooooooooooooooo △ Profileゾーン △ oooooooooooooooooooooooooooooooo -->
 
 
     <!-- ************************************************************************************* -->
@@ -392,7 +465,7 @@
 
         <div class="footer wrapper">
             <p>
-                <a href="mailto:info@example.om">お問い合わせ</a>
+                <!-- <a href="mailto:info@example.om">お問い合わせ</a> -->
                 / <small>&copy; 2022 </small>
             </p>
         </div>
