@@ -51,10 +51,42 @@ font-face
     src: url("../font/KiwiMaru-Light.eot?#iefix") format("embedded-opentype"),
         url("../font/KiwiMaru-Light.woff") format("woff"),
         url("../font/KiwiMaru-Light.ttf") format("truetype"),
+        url("../font/KiwiMaru-Light.otf") format("truetype"),
         url("../font/KiwiMaru-Light.svg") format("svg");
 }
 
 @font-face {
+    font-family: 'Billy Ohio';
+    src: url('Billy Ohio.eot');
+    src: url('Billy Ohio.eot?#iefix') format('embedded-opentype'),
+         url('Billy Ohio.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'BillyOhio';
+    src: url('BillyOhio.svg#BillyOhio') format('svg'),
+         url('BillyOhio.ttf') format('truetype'),
+         url('BillyOhio.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PerfectMoment-Script';
+    src: url('PerfectMoment-Script.eot');
+    src: url('PerfectMoment-Script.eot?#iefix') format('embedded-opentype'),
+         url('PerfectMoment-Script.svg#PerfectMoment-Script') format('svg'),
+         url('PerfectMoment-Script.ttf') format('truetype'),
+         url('PerfectMoment-Script.woff') format('woff'),
+         url('PerfectMoment-Script.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+/* 
+@font-face {
     font-family: "Billy Ohio";
     src: url("../font/Billy Ohio.eot");
     src: url("../font/Billy Ohio.eot?#iefix") format("embedded-opentype"),
@@ -70,15 +102,16 @@ font-face
         url("../font/Billy Ohio.woff") format("woff"),
         url("../font/Billy Ohio.ttf") format("truetype"),
         url("../font/Billy Ohio.svg") format("svg");
-}
-@font-face {
+} */
+
+/* @font-face {
     font-family: "Nexa Bold";
     src: url("../font/Nexa Bold.eot");
     src: url("../font/Nexa Bold.eot?#iefix") format("embedded-opentype"),
         url("../font/Nexa Bold.woff") format("woff"),
         url("../font/Nexa Bold.ttf") format("truetype"),
         url("../font/Nexa Bold.svg") format("svg");
-}
+} */
 
 
 /*
@@ -248,7 +281,7 @@ FADE
     line-height: 1.0;
     overflow: hidden;
     z-index: 100;
-    font-family: 'Nexa Bold', sans-ser if;
+    /* font-family: 'Nexa Bold', sans-ser if; */
     position: absolute;
     top: 5%;
     left: 5%;
