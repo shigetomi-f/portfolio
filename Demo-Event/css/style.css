@@ -37,7 +37,7 @@ body {
 /*
 font-face
 ================================================ */
-@font-face {
+/* @font-face {
     font-family: "BIZUDPGothic-Bold";
     src: url("../font/BIZUDPGothic-Bold.eot");
     src: url("../font/BIZUDPGothic-Bold.eot?#iefix") format("embedded-opentype"),
@@ -62,7 +62,46 @@ font-face
         url("../font/Neutro-Bold.woff") format("woff"),
         url("../font/Neutro-Bold.ttf") format("truetype"),
         url("../font/Neutro-Bold.svg") format("svg");
-}
+} */
+
+@font-face {
+    font-family: 'BIZUDPGothic-Regular';
+    src: url('../font/BIZUDPGothic-Regular.eot');
+    src: url('../font/BIZUDPGothic-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/BIZUDPGothic-Regular.svg#BIZUDPGothic-Regular') format('svg'),
+         url('../font/BIZUDPGothic-Regular.ttf') format('truetype'),
+         url('../font/BIZUDPGothic-Regular.woff') format('woff'),
+         url("../font/BIZUDPGothic-Regular.otf") format("truetype"),
+         url('../font/BIZUDPGothic-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'BIZUDPGothic-Bold';
+    src: url('../font/BIZUDPGothic-Bold.eot');
+    src: url('../font/BIZUDPGothic-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/BIZUDPGothic-Bold.svg#BIZUDPGothic-Bold') format('svg'),
+         url('../font/BIZUDPGothic-Bold.ttf') format('truetype'),
+         url('../font/BIZUDPGothic-Bold.woff') format('woff'),
+         url("../font/BIZUDPGothic-Bold.otf") format("truetype"),
+         url('../font/BIZUDPGothic-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Neutro';
+    src: url('../font/NeutroBold.eot');
+    src: url('../font/NeutroBold.eot?#iefix') format('embedded-opentype'),
+         url('../font/NeutroBold.svg#NeutroBold') format('svg'),
+         url('../font/NeutroBold.ttf') format('truetype'),
+         url('../font/NeutroBold.woff') format('woff'),
+         url("../font/NeutroBold.otf") format("truetype"),
+         url('../font/NeutroBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 /*
 COMMON
