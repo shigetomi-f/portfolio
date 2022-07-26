@@ -33,6 +33,26 @@ body {
     font-family: sans-serif;
 }
 
+body::before {
+    /* background-image: url(images/home_back.png);
+    background-attachment:fixed;
+    position: fixed;
+    z-index: -1;
+    height: 100vh; */
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-image: url(images/home_back.jpeg);
+    background-size: cover;
+}
+
 /*
 font-face
 ================================================ */
@@ -59,32 +79,32 @@ font-face
     font-family: 'Billy Ohio';
     src: url('Billy Ohio.eot');
     src: url('Billy Ohio.eot?#iefix') format('embedded-opentype'),
-         url('Billy Ohio.woff2') format('woff2');
+        url('Billy Ohio.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'BillyOhio';
     src: url('BillyOhio.svg#BillyOhio') format('svg'),
-         url('BillyOhio.ttf') format('truetype'),
-         url('BillyOhio.woff') format('woff');
+        url('BillyOhio.ttf') format('truetype'),
+        url('BillyOhio.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'PerfectMoment-Script';
     src: url('PerfectMoment-Script.eot');
     src: url('PerfectMoment-Script.eot?#iefix') format('embedded-opentype'),
-         url('PerfectMoment-Script.svg#PerfectMoment-Script') format('svg'),
-         url('PerfectMoment-Script.ttf') format('truetype'),
-         url('PerfectMoment-Script.woff') format('woff'),
-         url('PerfectMoment-Script.woff2') format('woff2');
+        url('PerfectMoment-Script.svg#PerfectMoment-Script') format('svg'),
+        url('PerfectMoment-Script.ttf') format('truetype'),
+        url('PerfectMoment-Script.woff') format('woff'),
+        url('PerfectMoment-Script.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-  }
-  
+}
+
 /* 
 @font-face {
     font-family: "Billy Ohio";
@@ -287,14 +307,14 @@ FADE
     left: 5%;
 }
 
-.maison_img{
+.maison_img {
     position: absolute;
     top: 4.2%;
     left: 2.8%;
     width: 2%;
 }
 
-.bamble_logo{
+.bamble_logo {
     position: absolute;
     top: 40%;
     right: 3%;
@@ -513,11 +533,50 @@ button {
 }
 
 
-
 #explain2 {
-    background-image: url(images/band2.png);
+    background-image: url(images/band2.jpg);
     padding-bottom: 2rem;
+    background-size: cover;
 }
+
+
+/* #explain2 {
+    background-image: url(images/band2.jpg);
+    background-color: #2424259c;
+
+    padding-bottom: 2rem;
+
+    background-attachment: fixed;
+    background-image: url(画像URLをここに);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#explain2::before {
+    background: inherit;
+    content: '';
+    filter: blur(6px);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+  }
+  #explain2 .text-zone{
+    position:absolute;
+    font-size:2.8rem;
+    color:#fff;
+    font-weight:bold;
+  } */
+
+
+
 
 
 .maru_box {
@@ -740,7 +799,8 @@ body {
 
 #lineup {
     padding: 2rem 1rem;
-    background-image: url(images/band2.png);
+    background-image: url(images/band2.jpg);
+    background-size: cover;
 
 }
 
@@ -832,9 +892,9 @@ product
     margin-right: 20px;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1250px) {
     #product p {
-        font-size: 100%;
+        font-size: 92%;
     }
 }
 
@@ -957,7 +1017,7 @@ about
     min-width: 350px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 699px) {
     .sasu_img_box {
         width: 100%;
     }
@@ -967,8 +1027,9 @@ about
 .sasu_img_box>p {
     /* background-color: rgba(255, 255, 255, 0.914); */
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    padding-bottom: 10%;
+    padding-left: 25%;
     color: #efefef;
     font-size: 1.3rem;
 
@@ -1028,7 +1089,7 @@ about
     /* border-radius: 100px; */
 }
 
-#shopping h2{
+#shopping h2 {
     /* font-size: 2rem; */
     margin-bottom: 3rem;
     /* font-family: 'KiwiMaru-Light', sans-serif; */
@@ -1040,7 +1101,7 @@ about
     font-family: 'ヒラギノ丸ゴ ProN W4', sans-serif;
 } */
 
-#shopping p{
+#shopping p {
     font-size: 1rem;
 }
 
@@ -1082,7 +1143,7 @@ about
 
 }
 
-#access h2{
+#access h2 {
     margin-bottom: 2rem;
 }
 
