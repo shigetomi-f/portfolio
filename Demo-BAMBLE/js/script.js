@@ -54,6 +54,13 @@ jQuery(function ($) {
 });
 
 
+// ローディング
+const loading = document.querySelector( '.loading' );
+
+window.addEventListener( 'load', () => {
+  loading.classList.add( 'hide' );
+}, false );
+
 
 /* 小さくなった時のメニューボタン */
 
@@ -64,6 +71,29 @@ $(function () {
 });
 
 // テスト
+
+$(function () {
+  var webStorage = function () {
+    if (sessionStorage.getItem('access')) {
+      /*
+        2回目以降アクセス時の処理
+      */
+      $(".loading").addClass('is-active');
+    } else {
+      /*
+        初回アクセス時の処理
+      */
+      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+      $(".loading-animation , .loading-png").addClass('is-active'); // loadingアニメーションを表示
+      setTimeout(function () {
+        // ローディングを数秒後に非表示にする
+        $(".loading").addClass('is-active');
+        $(".loading-animation , .loading-png").removeClass('is-active');
+      }, 3000); // ローディングを表示する時間
+    }
+  }
+  webStorage();
+});
 
 // window.onload = function() {
 

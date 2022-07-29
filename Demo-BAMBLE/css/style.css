@@ -217,6 +217,107 @@ h1,
     display: none;
 }
 
+
+
+
+/* <!-- ローディングテスト --> */
+
+.loading {
+    /* width: 100vw;
+    height: 100vh; */
+    transition: all 1s;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .loading.is-active {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loading-animation {
+    width: 10%;
+    height: 20%;
+    transition: all 1s;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    /* display: flex; */
+    position: fixed;
+    top: 75%;
+    left: 45%;
+    /* left: 24rem; */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .loading-animation.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .loading-png {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .loading-png.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  /*********************************
+  *
+  *  ローディング画面
+  *
+  *********************************/
+  #loading {
+    /* 画面一杯にローディング画面を広げる */
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    /* flexboxを使ってローディングアイコンを画面の中央に寄せる */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+/* <!-- ローディングテスト --> */
+
+
+
+
+
+
+
+
+
+
 /*
 FADE
 ================================================ */
@@ -274,10 +375,8 @@ FADE
 
 
 /* SM版ミニタイトル */
-.sm_title_portfolio {
-    /* ポトフォのタイトル文字 */
+/* .sm_title_portfolio {
     text-align: right;
-    /* font-size: 100px; */
     font-size: 6vh;
     color: var(--white);
     line-height: 1.0;
@@ -288,13 +387,13 @@ FADE
     top: 13%;
     left: 20%;
 
-}
+} */
 
 
 /* PC版長タイトル */
 .maison {
     /* ポトフォのタイトル文字 */
-    text-align: left;
+    text-align: right;
     /* font-size: 100px; */
     font-size: 3vh;
     color: var(--white);
@@ -304,14 +403,14 @@ FADE
     /* font-family: 'Nexa Bold', sans-ser if; */
     position: absolute;
     top: 5%;
-    left: 5%;
+    left: 4rem;
 }
 
 .maison_img {
     position: absolute;
     top: 4.2%;
     left: 2.8%;
-    width: 2%;
+    width: 2rem;
 }
 
 .bamble_logo {
@@ -321,6 +420,74 @@ FADE
     width: 20%;
 }
 
+
+
+/* body{
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+} */
+/* SM版ミニタイトル */
+/* header{
+    width: 100%;
+    padding: 0 0;
+}
+.header_wrapper{
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_wrapper h1{
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+.header_wrapper h1 a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 34px;
+}
+.header_wrapper h1 span{
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-right: 10px;
+} */
+/* ナビゲーション */
+.gnav{
+    width: 100%;
+    background-color: #333;
+}
+.gnav_wrapper{
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+}
+.gnav_wrapper li{
+    border-left: #888 1px solid;
+    text-align: center;
+    width: calc(100%/4);
+    transition: all  0.3s ease;
+}
+.gnav_wrapper li:last-child{
+    border-right: #888 1px solid;
+}
+.gnav_wrapper li:hover{
+    background-color: #888;
+}
+.gnav_wrapper li a{
+    display: block;
+    padding: 0.5em 0;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'PerfectMoment-Script', sans-serif;
+    font-size: 1rem;
+
+}
 
 
 
@@ -710,6 +877,7 @@ button {
 #news {
     padding: 4rem 0;
     text-align: center;
+    
 }
 
 /* 下の＊とかのとこ他影響出そうなので
@@ -988,6 +1156,8 @@ about
 #about {
     padding: 6rem 0rem;
     /* margin: 0 auto; */
+    margin-top: 6rem;
+
 
 }
 
@@ -1070,6 +1240,7 @@ about
 
 #shopping {
     /* text-align: center; */
+    margin-top: 6rem;
     margin-bottom: 6rem;
 
 
@@ -1140,6 +1311,7 @@ about
 
 #access {
     text-align: center;
+    margin-top: 6rem;
 
 }
 
@@ -1154,6 +1326,8 @@ about
 
 #sns {
     padding: 4rem 1rem;
+    margin-top: 6rem;
+
 }
 
 
@@ -1519,5 +1693,30 @@ DESKTOP SIZE ＜SM＞
     .no_pc {
         display: none;
     }
-
+    .maison{
+        display: none;
+    }
+    .maison_img{
+        display: none;
+    }
 }
+
+/*
+DESKTOP SIZE ＜SM＞
+================================================ */
+@media (min-width: 930px) {
+
+    /* 横並びナビ非表示*/
+    .gnav  {
+        display: none;
+    }
+}
+
+@media (max-width: 929px) {
+
+    /* 横並びナビ非表示*/
+    .pc_nav  {
+        display: none;
+    }
+}
+

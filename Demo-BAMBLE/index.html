@@ -30,6 +30,21 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 
+    <!-- スマホ用メニュー -->
+    <!-- <div class="header_wrapper">
+        <h1>
+            <a href="#">SAMPLE</a>
+            <span>SAMPLE<br>グローバルメニューのテンプレ</span>
+        </h1>
+        <div>
+            <a class="maison" href="#top">
+                MAISON MARLO
+            </a>
+            <img class="maison_img" src="images/maison.png">
+
+        </div>
+    </div> -->
+
 
 </head>
 
@@ -45,6 +60,18 @@
 </div>
 <!-- 下の行がないとスクロールボタンが消えてくれません涙 -->
 <button class="btn-menu"></button>
+
+    <!-- ローディングテスト -->
+
+    <div class="loading">
+        <div class="loading-animation"> <img src="images/load.gif"></div>
+            <br>
+            <div class="loading-png">
+                <img src="images/load.png">
+            </div>
+      </div>
+        <!-- テスト -->
+
 
 <body>
 
@@ -78,7 +105,7 @@
 
         <!-- PC版横並びメニューナビ -->
         <!-- <div class="sm_display_none sm_nav js-sm_nav"> -->
-        <div class=" ">
+        <div class="pc_nav">
             <ul id="top_nav">
                 <li><a href="file:///Users/xoxo/Demo-BAMBLE/index.html#">HOME</a></li>
                 <li><a href="file:///Users/xoxo/Demo-BAMBLE/about.html#">ABOUT</a></li>
@@ -87,6 +114,18 @@
 
             </ul>
         </div>
+
+        <!-- スマホ用メニュー -->
+        <nav class="gnav">
+            <ul class="gnav_wrapper">
+                <li><a href="index.html#">HOME</a></li>
+                <li><a href="about.html#">ABOUT</a></li>
+                <li><a href="shop.html#">SHOP</a></li>
+                <li><a href="access.html#">ACCESS</a></li>
+            </ul>
+        </nav>
+
+
 
 
         <!-- 小さくなったときのメニューボタン -->
@@ -345,14 +384,14 @@
 
 
 
-    <!-- ************************************************************************************* -->
-    <!-- *                                                                                   * -->
-    <!-- *                                    お問い合わせ                                       * -->
-    <!-- *                                                                                   * -->
-    <!-- ************************************************************************************* -->
+        <!-- ************************************************************************************* -->
+        <!-- *                                                                                   * -->
+        <!-- *                                    お問い合わせ                                       * -->
+        <!-- *                                                                                   * -->
+        <!-- ************************************************************************************* -->
 
 
-<!-- 
+        <!-- 
 
     <div class="Form">
         <div class="Form-Item">
@@ -373,33 +412,33 @@
 
 
 
-    <!-- ************************************************************************************* -->
-    <!-- *                                                                                   * -->
-    <!-- *                                     CONTACT                                       * -->
-    <!-- *                                                                                   * -->
-    <!-- ************************************************************************************* -->
+        <!-- ************************************************************************************* -->
+        <!-- *                                                                                   * -->
+        <!-- *                                     CONTACT                                       * -->
+        <!-- *                                                                                   * -->
+        <!-- ************************************************************************************* -->
 
 
-    <section id="contact">
-        <h1>contact</h1>
-        <form class="contact-form" action="#">
-            <label>Name</label>
-            <input class="contact-field" type="text" placeholder="例：山田太郎">
-            <label>Email</label>
-            <input class="contact-field" type="email" placeholder="例：sample@example.com">
-            <input class="contact-btn" type="submit" value="Join Now!">
-        </form>
+        <section id="contact">
+            <h1>contact</h1>
+            <form class="contact-form" action="#">
+                <label>Name</label>
+                <input class="contact-field" type="text" placeholder="例：山田太郎">
+                <label>Email</label>
+                <input class="contact-field" type="email" placeholder="例：sample@example.com">
+                <input class="contact-btn" type="submit" value="Join Now!">
+            </form>
 
-        <div class="footer wrapper">
-            <p>
-                <a href="mailto:info@example.om">お問い合わせ</a>
-                / <small>&copy; 2022 </small>
-            </p>
-        </div>
-    </section>
+            <div class="footer wrapper">
+                <p>
+                    <a href="mailto:info@example.om">お問い合わせ</a>
+                    / <small>&copy; 2022 </small>
+                </p>
+            </div>
+        </section>
 
 
-    <!-- <section>
+        <!-- <section>
         <parent>
             <div class="div1"> </div>
             <div class="div2"> </div>
@@ -409,8 +448,8 @@
 
 
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
 
 
 
