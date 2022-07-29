@@ -10,12 +10,85 @@ btn.addEventListener('click', () => {
   }
 });
 
-
 //  jQueryのCDN
 $(function(){
   $(".fed").hide().fadeIn('slow');
 });
 
+//  ローデイング
+// const spinner = document.querySelector('loading');
+// const main = document.querySelector('main');
+
+// window.addEventListener('load', stopload);
+// setTimeout('stopload()', 50000);
+
+// function stopload() {
+//   spinner.style.display = 'none';
+//   main.style.opacity = 1;
+// }
+
+// const loading = document.querySelector( '.loading' );
+
+// window.addEventListener( 'load', () => {
+//   loading.classList.add( 'hide' );
+// }, false );
+
+
+// const spinner = document.querySelector('loading');
+// const main = document.querySelector('main');
+
+// window.addEventListener('load', stopload);
+// setTimeout('stopload()', 200000);
+
+// function stopload() {
+//   // spinner.style.display = 'none';
+//   main.style.opacity = 1;
+// }
+
+// const loading = document.querySelector( '.loading' );
+
+// window.addEventListener( 'load', () => {
+//   loading.classList.add( 'hide' );
+// }, false );
+
+
+
+// $(window).on('load', function(){
+//   $('#loading').fadeOut();
+// });
+
+
+
+
+$(function () {
+  var webStorage = function () {
+    if (sessionStorage.getItem('access')) {
+      /*
+        2回目以降アクセス時の処理
+      */
+      $(".loading").addClass('is-active');
+    } else {
+      /*
+        初回アクセス時の処理
+      */
+      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+      $(".loading-animation").addClass('is-active'); // loadingアニメーションを表示
+      setTimeout(function () {
+        // ローディングを数秒後に非表示にする
+        $(".loading").addClass('is-active');
+        $(".loading-animation").removeClass('is-active');
+      }, 3000); // ローディングを表示する時間
+    }
+  }
+  webStorage();
+});
+
+
+// const loading = document.querySelector( '.loading' );
+
+// window.addEventListener( 'load', () => {
+//   loading.classList.add( 'hide' );
+// }, false );
 
 //スクロールトップボタン
 $(function () {
