@@ -172,5 +172,27 @@ $(function () {
 // });
 
 
+// お問い合わせメールフォーム
+window.onload = function() {
+
+  var address, subject, nam, ptype, price, all, body, hiddenData;
+  var sendmail = document.getElementById('mail_btn');
+
+  sendmail.onclick = function() {
+
+      // txtData = document.getElementById('txt_data').value;
+      email = document.getElementById('email').value;
+      txt = document.getElementById('txt').value;
+      
+      address = email;
+      subject = '';
+      body = txt; 
+
+      // location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+      location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+
+  };
+
+};
 
 

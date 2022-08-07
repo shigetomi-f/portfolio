@@ -28,8 +28,8 @@
 
 <!-- 背景固定して文字スクロール -->
 
-<body background="images/home_back.jpg" style="background-attachment:fixed">
-</body>
+<!-- <body background="images/home_back.jpg" style="background-attachment:fixed">
+</body> -->
 
 <!-- スクロールトップボタン -->
 <div id="js-pagetop">
@@ -185,7 +185,8 @@
                 <img src="images/pro6.png" alt="camp">
 
                 <p>
-                    以前は、音楽フェスや海外旅行などによく行ってましたが、<br>
+                    以前は、音楽フェスや海外旅行などによく行ってましたが、
+                    <!-- <div class="hobby_br"><br><div> -->
                     コロナになってからは自然をよく満喫するようになりました。
                 </p>
             </div>
@@ -205,7 +206,8 @@
                     <span>放送系システム<br>システム開発<br></span>
                     主な担当業務：<br>
                     システム開発、保守<br>
-                    XXXX:Java、SQL、html、css等</span>
+                    <li>Java、SQL、html、css</li><br>
+                </span>
             </div>
             <br>
             <div class="profile_box2 profile-sentence">
@@ -215,9 +217,8 @@
                 <span class="circle_sentence">
                     <span> 放送系システム<br>システム移行<br></span>
                     主な担当業務：<br>
-                    GCP環境構築、移行業務
-                    XXXX:GCP、Linux、bash、等</span>
-                    管理経験:進捗関連管理<br>
+                    GCP環境構築、移行業務<br>
+                    <li>GCP、Linux、bash、進捗関連管理</li><br>
                 </span>
             </div>
             <br>
@@ -226,10 +227,10 @@
                     2022-
                 </span>
                 <span class="circle_sentence">
-                    <span>銀行系システム<br>基盤構築<br></span>                   
+                    <span>銀行系システム<br>基盤構築<br></span>
                     主な担当業務：<br>
-                    オンプレミス環境構築
-                    XXXX:HPUX、Linux、OracleDB、bash等</span>
+                    オンプレミス環境構築<br>
+                    <li>HPUX、Linux、OracleDB、bash</li><br>
                 </span>
             </div>
         </div>
@@ -247,21 +248,41 @@
 
     <section id="contact">
         <h1>contact</h1>
-        <form class="contact-form" action="#">
+        <!-- <form class="contact-form" action="#">
             <label>Name</label>
             <input class="contact-field" type="text" placeholder="例：山田太郎">
             <label>Email</label>
             <input class="contact-field" type="email" placeholder="例：sample@example.com">
             <input class="contact-btn" type="submit" value="Join Now!">
+        </form> -->
+
+        <form class="contact-form" action="#">
+            <label>Email</label>
+            <input class="contact-field" type="email" id='email' placeholder="例：sample@example.com">
+            <label>Inquiry Contact</label>
+            <input class="contact-field" type="text" id='txt' placeholder="お問い合わせ内容">
+            <input class="contact-btn" type="submit" value="Submit" id='mail_btn'>
         </form>
+
 
         <div class="footer wrapper">
             <p>
-                <!-- <a href="mailto:info@example.om">お問い合わせ</a> -->
-                / <small>&copy; 2022 </small>
+             <small>&copy; 2022 </small>
             </p>
         </div>
     </section>
+
+    <!-- <input type='number' max="50" min="1" id='txt_data' ondrop="return false;" onpaste="return false;"
+    value='' placeholder='0'> -->
+<!-- <script type="text/javascript">
+        p_type = "300";
+    </script> -->
+<!-- (個)<br> -->
+
+
+<!-- <input type='text' id='txt_data' value='' placeholder='メール本文を書く場合ここに書く'> -->
+<!-- <a href="" class="btn btn-coler btn-radius btn-cubic" id='mail_btn'>購入
+    <i class="fas fa-angle-right fa-position-right"></i></a> -->
 
 
     <!-- <section>

@@ -33,36 +33,27 @@ body {
     font-family: sans-serif;
 }
 
+/* スマホでも背景固定 */
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-image: url(images/home_back.jpg);
+    background-size: cover;
+}
+
+
 
 /*
 font-face
 ================================================ */
-/* @font-face {
-    font-family: "BIZUDPGothic-Bold";
-    src: url("../font/BIZUDPGothic-Bold.eot");
-    src: url("../font/BIZUDPGothic-Bold.eot?#iefix") format("embedded-opentype"),
-        url("../font/BIZUDPGothic-Bold.woff") format("woff"),
-        url("../font/BIZUDPGothic-Bold.ttf") format("truetype"),
-        url("../font/BIZUDPGothic-Bold.svg") format("svg");
-}
-
-@font-face {
-    font-family: "BIZUDPGothic-Regular";
-    src: url("../font/BIZUDPGothic-Regular.eot");
-    src: url("../font/BIZUDPGothic-Regular.eot?#iefix") format("embedded-opentype"),
-        url("../font/BIZUDPGothic-Regular.woff") format("woff"),
-        url("../font/BIZUDPGothic-Regular.ttf") format("truetype"),
-        url("../font/BIZUDPGothic-Regular.svg") format("svg");
-}
-
-@font-face {
-    font-family: "Neutro-Bold";
-    src: url("../font/Neutro-Bold.eot");
-    src: url("../font/Neutro-Bold.eot?#iefix") format("embedded-opentype"),
-        url("../font/Neutro-Bold.woff") format("woff"),
-        url("../font/Neutro-Bold.ttf") format("truetype"),
-        url("../font/Neutro-Bold.svg") format("svg");
-} */
 
 @font-face {
     font-family: 'BIZUDPGothic-Regular';
@@ -152,11 +143,6 @@ h3 {
 }
 
 
-/* header,
-h1,
-.hero-date {
-    font-family: impact, sans-serif;
-} */
 
 /* Layout  画面のオブジェクトが広がるマックスサイズ＝wrapper　*/
 .wrapper {
@@ -182,7 +168,7 @@ h1,
 @media (max-width: 599px) {
     #js-pagetop {
         width: 50px;
-        bottom: 50px;
+        bottom: 20px;
         left: 50%;
         margin: 0px 0px 0px -25px;
 
@@ -197,142 +183,8 @@ h1,
 
 
 /* ローデイング */
-/* 
-#loading {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    background: #111;
-    z-index: 9999;
-  }
-  
-  #loading__animation {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    animation: lodanimetion 1500ms ease-out forwards infinite;
-  }
-  
-  @keyframes lodanimetion {
-    from,
-    to {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-  
-  #main {
-    opacity: 0;
-    transition: 1s;
-  } */
 
-
-  /* body {
-    margin: 0;
-    padding: 0;
-  }
-  .loading {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background: #fdfdfd;
-  }
-  .loading.hide {
-    opacity: 0;
-    pointer-events: none;
-    /* transition: opacity 500ms; */
-  /* }
-  .loading .circle {
-    display: block;
-    position: relative;
-    top: calc( 50% - 20px );  */
-    /* width: 40px;
-    height: 40px;
-    margin: 0 auto; */
-    /* border: 8px solid #e0e0e0;
-    border-top: 7px solid #ffcccc; */
-    /* border-radius: 50px; */
-    /* animation: loading 700ms linear 0ms infinite normal both; */
-  /* } */
-
-  /* .loading .circle {
-    display: block;
-    position: relative;
-    top: calc( 50% - 20px );
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    border: 8px solid #e0e0e0;
-    border-top: 7px solid #ffcccc;
-    border-radius: 50px;
-    animation: loading 700ms linear 0ms infinite normal both;
-  } */
-  /* @keyframes loading {
-    0% { transform: rotate( 0deg ); }
-    100% { transform: rotate( 360deg ); }
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .mv {
-    width: 100wh;
-    height: 100vh;
-    background: url(../img/test1.jpg) no-repeat center center/cover;
-  }
-  
-  h1 {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 50px;
-    color: #333;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  #loading {
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1000;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  } */
-
-
-
-
-  .loading {
+.loading {
     width: 100vw;
     height: 100vh;
     transition: all 1s;
@@ -343,14 +195,14 @@ h1,
     z-index: 9999;
     opacity: 1;
     visibility: visible;
-  }
-  
-  .loading.is-active {
+}
+
+.loading.is-active {
     opacity: 0;
     visibility: hidden;
-  }
-  
-  .loading-animation {
+}
+
+.loading-animation {
     width: 100vw;
     height: 100vh;
     transition: all 1s;
@@ -361,19 +213,19 @@ h1,
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-  }
-  
-  .loading-animation.is-active {
+}
+
+.loading-animation.is-active {
     opacity: 1;
     visibility: visible;
-  }
-  
-  /*********************************
+}
+
+/*********************************
   *
   *  ローディング画面
   *
   *********************************/
-  #loading {
+#loading {
     /* 画面一杯にローディング画面を広げる */
     height: 100%;
     width: 100%;
@@ -392,7 +244,7 @@ h1,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-  }
+}
 
 /*
 FADE
@@ -434,7 +286,7 @@ FADE
 
 /* ============================================================================================= */
 /* =                                                                                           = */
-/* =                                       HOME                                                = */
+/* =                                  PC   HOME                                                = */
 /* =                                                                                           = */
 /* ============================================================================================= */
 
@@ -454,28 +306,6 @@ FADE
 }
 
 
-
-
-
-/* SM版ミニタイトル */
-.sm_title_portfolio {
-    /* ポトフォのタイトル文字 */
-    text-align: right;
-    /* font-size: 100px; */
-    font-size: 6vh;
-    color: var(--white);
-    line-height: 1.0;
-    overflow: hidden;
-    z-index: 1;
-    font-family: 'Neutro', sans-serif;
-    position: absolute;
-    top: 13%;
-    left: 20%;
-    /* -webkit-writing-mode:vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl; */
-
-}
 
 .tate {
     /*以下縦書きの設定*/
@@ -573,56 +403,7 @@ FADE
     transform: scale(1.2, 1.2) rotate(5deg);
 }
 
-/* ーーーーーーーーーーーーーーSM トップstickerーーーーーーーーーーーーーーー */
-
-
-/* home */
-.sm_top-home {
-    width: 20vh;
-    display: inline-block;
-    transform: rotate(0deg);
-    position: absolute;
-    top: 60%;
-    right: 10%;
-}
-
-.sm_top-home:hover {
-    transition: .5s;
-    transform: scale(1.2, 1.2);
-}
-
-/* product */
-.sm_top-product {
-    width: 18vh;
-    display: inline-block;
-    transform: rotate(-5deg);
-    position: absolute;
-    top: 80%;
-    right: 40%;
-}
-
-.sm_top-product:hover {
-    transition: .5s;
-    transform: scale(1.2, 1.2) rotate(-5deg);
-}
-
-
-/* profile */
-.sm_top-profile {
-    width: 20vh;
-    display: inline-block;
-    transform: rotate(5deg);
-    position: absolute;
-    top: 50%;
-    right: 5%;
-}
-
-.sm_top-profile:hover {
-    transition: .5s;
-    transform: scale(1.2, 1.2) rotate(5deg);
-}
-
-/* ****************************************** 横並びメニューボタン ******************************************  */
+/* ****************************************** 横並びメニューボタン*****************************************  */
 
 
 .top_nav {
@@ -681,6 +462,122 @@ FADE
 .top_nav li:hover a,
 .top_nav_product li:hover a {
     color: var(--blue);
+}
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                    sm HOME                                                = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+
+#top_2 {
+    background-image: url('../images/home_back_sm.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    animation: bg-color 24s infinite;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    border: 45px solid white;
+}
+
+
+/* SM版ミニタイトル */
+.sm_title_portfolio {
+    /* ポトフォのタイトル文字 */
+    text-align: right;
+    /* font-size: 100px; */
+    font-size: 6vh;
+    color: var(--white);
+    line-height: 1.0;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Neutro', sans-serif;
+    position: absolute;
+    top: 13%;
+    left: 20%;
+    /* height: 100px; */
+    /* -webkit-writing-mode:vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl; */
+
+}
+
+.tate {
+    /*以下縦書きの設定*/
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    /*幅と高さを指定*/
+    width: 100%;
+    height: 150px;
+}
+
+
+.span_yellow {
+    color: var(--blue);
+    transition: .3s;
+
+}
+
+.pc_title_portfolio:hover>.span_yellow,
+.sm_title_portfolio:hover>.span_yellow {
+    color: var(--k_yellow);
+}
+
+
+/* ーーーーーーーーーーーーーーSM トップstickerーーーーーーーーーーーーーーー */
+
+
+/* home */
+.sm_top-home {
+    width: 20vh;
+    display: inline-block;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+
+.sm_top-home:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2);
+}
+
+/* product */
+.sm_top-product {
+    width: 18vh;
+    display: inline-block;
+    transform: rotate(-5deg);
+    position: absolute;
+    top: 70%;
+    right: 40%;
+}
+
+.sm_top-product:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2) rotate(-5deg);
+}
+
+
+/* profile */
+.sm_top-profile {
+    width: 20vh;
+    display: inline-block;
+    transform: rotate(5deg);
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+.sm_top-profile:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2) rotate(5deg);
 }
 
 
@@ -1400,14 +1297,26 @@ Profile
     color: rgb(0, 0, 0);
     font-family: 'BIZUDPGothic-Regular', sans-serif;
     text-align: left;
-
 }
+
+.circle_sentence>li {
+    color: #7b7b7b;
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'BIZUDPGothic-Regular', sans-serif;
+    text-align: left;
+}
+
 
 .circle_sentence>span {
     font-size: 25px;
     text-align: center;
     height: 65px;
 }
+
 
 
 /* ============================================================================================= */
@@ -1549,6 +1458,11 @@ DESKTOP SIZE ＜PC＞
         display: none;
     }
 
+    /* トップ画面*/
+    #top_2 {
+        display: none;
+    }
+
 
 
 }
@@ -1564,6 +1478,11 @@ DESKTOP SIZE ＜SM＞
     }
 
     .sm_display_none {
+        display: none;
+    }
+
+    /* トップ画面*/
+    #top {
         display: none;
     }
 
@@ -1660,3 +1579,14 @@ DESKTOP SIZE ＜mini_SM＞
     }
 
 }
+
+
+/*
+hoddy br ＜SM＞
+================================================ */
+/* @media (max-width: 467px) {
+
+    .hobby_br {
+        display: none;
+    }
+} */
