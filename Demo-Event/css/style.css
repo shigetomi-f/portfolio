@@ -4,18 +4,20 @@
 COLORS
 =============================================== */
 :root {
-    --light-blue: #4db1ec;
+    /* --light-blue: #4db1ec; */
     --blue: #1665cc;
-    --purple: #b473bf;
-    --pink: #ffb2c1;
-    --orange: #ff9f67;
-    --yellow: #ffd673;
-    --light-green: #a2e29b;
-    --green: #00a2af;
+    /* --purple: #b473bf; */
+    /* --pink: #ffb2c1; */
+    /* --orange: #ff9f67; */
+    /* --yellow: #ffd673; */
+    --yellow: #eef929;
+    /* --light-green: #a2e29b; */
+    /* --green: #00a2af; */
     --grey: #333;
-    --transparent: rgba(255, 255, 255, 0);
+    --black: rgba(255, 255, 255, 0);
     --white: #fff;
-    --k_yellow: #eef929;
+    --white-a: rgba(255, 255, 255, 0.914);
+    /* --k_yellow: #eef929; */
 }
 
 /*
@@ -135,14 +137,12 @@ a:hover {
     color: var(--blue);
 }
 
-/* ↓のタグで囲んでるものを中心配置　*/
+/* 中央配置　*/
 h1,
 h2,
 h3 {
     text-align: center;
 }
-
-
 
 /* Layout  画面のオブジェクトが広がるマックスサイズ＝wrapper　*/
 .wrapper {
@@ -152,7 +152,7 @@ h3 {
     padding: 0 1rem;
 }
 
-/* スクロールトップボタン */
+/* スクロールアップボタン */
 #js-pagetop {
     position: fixed;
     width: 100px;
@@ -164,6 +164,9 @@ h3 {
     opacity: 75%;
     z-index: 1000;
 }
+.btn-menu {
+    display: none;
+}
 
 @media (max-width: 599px) {
     #js-pagetop {
@@ -171,19 +174,12 @@ h3 {
         bottom: 20px;
         left: 50%;
         margin: 0px 0px 0px -25px;
-
     }
 }
 
-
-/* スクロールトップボタン */
-.btn-menu {
-    display: none;
-}
-
-
-/* ローデイング */
-
+/*
+ローデイング画面
+================================================ */
 .loading {
     width: 100vw;
     height: 100vh;
@@ -220,11 +216,7 @@ h3 {
     visibility: visible;
 }
 
-/*********************************
-  *
-  *  ローディング画面
-  *
-  *********************************/
+
 #loading {
     /* 画面一杯にローディング画面を広げる */
     height: 100%;
@@ -245,6 +237,7 @@ h3 {
     -ms-flex-align: center;
     align-items: center;
 }
+
 
 /*
 FADE
@@ -286,7 +279,7 @@ FADE
 
 /* ============================================================================================= */
 /* =                                                                                           = */
-/* =                                  PC   HOME                                                = */
+/* =                                      【PC】 HOME                                           = */
 /* =                                                                                           = */
 /* ============================================================================================= */
 
@@ -342,11 +335,12 @@ FADE
 
 .pc_title_portfolio:hover>.span_yellow,
 .sm_title_portfolio:hover>.span_yellow {
-    color: var(--k_yellow);
+    color: var(--yellow);
 }
 
-
-/* ーーーーーーーーーーーーーーPC トップstickerーーーーーーーーーーーーーーー */
+/*
+【PC】HOME PC用ジャンプステッカー
+================================================ */
 
 /* home */
 .top-home {
@@ -403,7 +397,9 @@ FADE
     transform: scale(1.2, 1.2) rotate(5deg);
 }
 
-/* ****************************************** 横並びメニューボタン*****************************************  */
+/*
+【PC】HOME PC用メニューボタン（横並び）
+================================================ */
 
 
 .top_nav {
@@ -467,10 +463,9 @@ FADE
 
 /* ============================================================================================= */
 /* =                                                                                           = */
-/* =                                    sm HOME                                                = */
+/* =                                      【SM】 HOME                                           = */
 /* =                                                                                           = */
 /* ============================================================================================= */
-
 
 
 #top_2 {
@@ -527,11 +522,13 @@ FADE
 
 .pc_title_portfolio:hover>.span_yellow,
 .sm_title_portfolio:hover>.span_yellow {
-    color: var(--k_yellow);
+    color: var(--yellow);
 }
 
 
-/* ーーーーーーーーーーーーーーSM トップstickerーーーーーーーーーーーーーーー */
+/*
+【SM】HOME SM用ジャンプステッカー
+================================================ */
 
 
 /* home */
@@ -581,7 +578,9 @@ FADE
 }
 
 
-/* ****************************************** 小さくなった時のメニューボタン ******************************************  */
+/*
+【SM】HOME SM用メニューボタン（縦並び）
+================================================ */
 
 * {
     box-sizing: border-box;
@@ -600,7 +599,7 @@ button {
     outline: 0;
     border: 0;
     border-radius: 0;
-    background: transparent;
+    background: var(--black);
     color: inherit;
     vertical-align: middle;
     text-align: inherit;
@@ -667,7 +666,7 @@ button {
 /***** メニューオープン時 *****/
 .sm_nav-line.open {
     /* 真ん中の線を透明に */
-    background-color: transparent;
+    background-color: var(--black);
 }
 
 .sm_nav-line.open::before,
@@ -687,8 +686,7 @@ button {
     transform: rotate(-45deg);
 }
 
-/**************** ここまで、ハンバーガーボタンのスタイリング ****************/
-/**************** 以下、ハンボタメニューのスタイリング ****************/
+/**************** 以下、縦メニューのスタイリング ****************/
 .menu {
     /* メニューを縦に */
     display: flex;
@@ -730,7 +728,7 @@ button {
     color: var(--blue);
 }
 
-/***** メニューオープン時位置0にして画面内に *****/
+/* メニュー一覧配置 */
 .menu.open {
     position: absolute;
     /* 一覧の位置 */
@@ -739,8 +737,196 @@ button {
 }
 
 
-/**************** タブ切り替えのスタイリング ****************/
-/* フェード切り替え */
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       PRODUCT                                             = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+#product_top {
+    padding: 5em 0 5em 0;
+    /* 上 | 右 | 下 | 左 */
+    text-align: center;
+    margin-bottom: -5rem;
+}
+
+/* プロダクトシール */
+.img_product {
+    position: relative;
+    /* 角度 */
+    transform: rotate(-15deg)
+}
+
+@media (min-width: 1600px) {
+    .img_product {
+        width: 150px;
+        top: 50px;
+        left: 25%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1599px) {
+    .img_product {
+        width: 150px;
+        top: 10px;
+        left: 25%;
+    }
+}
+
+@media (max-width: 599px) {
+    .img_product {
+        width: 100px;
+        top: 10px;
+        left: 20%;
+    }
+}
+
+/*
+PRODUCT
+================================================ */
+
+#product {
+    padding: 4rem 1rem;
+    /* background-color: rgba(255, 255, 255, 0.914); */
+}
+
+#product h1 {
+    margin-bottom: 2rem;
+}
+
+#product h2 {
+    font-size: 1.8rem;
+    /* background-color: rgba(255, 255, 255, 0.914); */
+    margin-bottom: 0rem;
+}
+
+#product p {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#product span {
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 0.7rem;
+
+}
+
+.product_background {
+    background-color: var(--white-a);
+
+}
+
+/* 枠 */
+.prd_flex {
+    display: flex;
+    /* gap: 15px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0rem 5rem;
+}
+
+.prd_box {
+    /* background-color: rgba(255, 255, 255, 0.914); */
+    width: 100%;
+    min-width: 300px;
+    height: 50%;
+    padding: 2rem 3rem;
+    /* text-align: center; */
+}
+
+.prd_box>p {
+    /* font-size: 100px; */
+}
+
+.prd_box_title {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 2%;
+}
+
+/* webサイト画像 */
+.img_web_position {
+    margin: auto;
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    /* height: 150px; */
+}
+
+/* 文章 */
+/* .prd_sentence {
+    中央揃え
+    margin: auto;
+    position: relative;
+    文字と画像の間
+    margin-top: 30px;
+    width: 90%;
+    font-size: 1.5rem;
+} */
+
+/* ui画像 */
+.prd_ui_box {
+    /* background-color: rgba(255, 255, 255, 0.914); */
+    width: 50%;
+    min-width: 300px;
+    padding: 2rem 3rem;
+}
+
+.img_ui_position {
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+/* moreボタン */
+.more_btn {
+    /* background-color: rgba(255, 255, 255, 0.914); */
+    color: #1665cc;
+}
+
+.btn-coler.btn-cubic {
+    border-bottom: 5px solid #0e4183;
+    color: #ffffff;
+
+}
+
+.btn-coler.btn-cubic:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid #0e4183;
+    color: rgb(160, 178, 216);
+
+}
+
+.btn-radius {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #1665cc;
+    border-radius: 80vh;
+}
+
+.fa-position-right {
+    position: absolute;
+    top: calc(50% - .5em);
+    right: 1rem;
+}
+
+
+
+/*
+PRODUCT タブ
+================================================ */
+
+/* タブ切り替え */
 @keyframes tabAnim {
     0% {
         opacity: 0;
@@ -784,7 +970,6 @@ input[type="radio"] {
     font-size: 23px;
     cursor: pointer;
     transition: ease 0.2s opacity;
-    /* 丸み */
     border-radius: 10px;
 }
 
@@ -846,212 +1031,14 @@ input[type="radio"] {
     -ms-animation: tabAnim ease 0.6s forwards;
 }
 
-/**************** ここまでタブ切り替えのスタイリング ****************/
-
-
-
-/* ============================================================================================= */
-/* =                                                                                           = */
-/* =                                       PRODUCT                                             = */
-/* =                                                                                           = */
-/* ============================================================================================= */
-
-/* productとprofileの間（profileのタイトル画像） */
-#product_top {
-    padding: 5em 0 5em 0;
-    /* 上 | 右 | 下 | 左 */
-    text-align: center;
-    margin-bottom: -5rem;
-}
-
-/* プロダクトシール */
-.img_product {
-    position: relative;
-    /* 斜め */
-    transform: rotate(-15deg)
-}
-
-@media (min-width: 1600px) {
-    .img_product {
-        width: 150px;
-        top: 50px;
-        left: 25%;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1599px) {
-    .img_product {
-        width: 150px;
-        top: 10px;
-        left: 25%;
-    }
-}
-
-@media (max-width: 599px) {
-    .img_product {
-        width: 100px;
-        top: 10px;
-        left: 20%;
-    }
-}
-
-/*
-product
-================================================ */
-#product {
-    padding: 4rem 1rem;
-    /* background-color: rgba(255, 255, 255, 0.914); */
-}
-
-#product h1 {
-    margin-bottom: 2rem;
-}
-
-#product h2 {
-    font-size: 1.8rem;
-    /* background-color: rgba(255, 255, 255, 0.914); */
-    margin-bottom: 0rem;
-}
-
-#product p {
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 20px;
-}
-
-#product span {
-    text-align: center;
-    color: #7b7b7b;
-    font-size: 0.7rem;
-
-}
-
-.product_background {
-    background-color: rgba(255, 255, 255, 0.914);
-
-}
-
-/* flexbox用 */
-
-.prd_flex {
-    display: flex;
-    /* gap: 15px; */
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0rem 5rem;
-}
-
-.prd_box {
-    /* background-color: rgba(255, 255, 255, 0.914); */
-    width: 100%;
-    min-width: 300px;
-    height: 50%;
-    padding: 2rem 3rem;
-    /* text-align: center; */
-}
-
-.prd_box>p {
-    /* font-size: 100px; */
-}
-
-.prd_box_title {
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 10px;
-    padding: 2%;
-}
-
-/* web画像 */
-.img_web_position {
-    margin: auto;
-    position: relative;
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-    /* height: 150px; */
-}
-
-/* 文章 */
-/* .prd_sentence {
-    中央揃え
-    margin: auto;
-    position: relative;
-    文字と画像の間
-    margin-top: 30px;
-    width: 90%;
-    font-size: 1.5rem;
-} */
-
-/* ui画像 */
-.prd_ui_box {
-    /* background-color: rgba(255, 255, 255, 0.914); */
-    width: 50%;
-    min-width: 300px;
-    padding: 2rem 3rem;
-}
-
-
-
-
-.img_ui_position {
-    margin: auto;
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    width: 150px;
-    text-align: center;
-}
-
-
-
-/* moreボタン */
-
-.more_btn {
-    /* background-color: rgba(255, 255, 255, 0.914); */
-    color: #1665cc;
-}
-
-.btn-coler.btn-cubic {
-    border-bottom: 5px solid #0e4183;
-    color: #ffffff;
-
-}
-
-.btn-coler.btn-cubic:hover {
-    margin-top: 3px;
-    border-bottom: 2px solid #0e4183;
-    color: rgb(160, 178, 216);
-
-}
-
-.btn-radius {
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    background-color: #1665cc;
-    border-radius: 80vh;
-}
-
-.fa-position-right {
-    position: absolute;
-    top: calc(50% - .5em);
-    right: 1rem;
-}
-
-
 
 
 /* ============================================================================================= */
 /* =                                                                                           = */
-/* =                                       PROFILE                                             = */
+/* =                                         PROFILE                                           = */
 /* =                                                                                           = */
 /* ============================================================================================= */
 
-/*
-profile
-================================================ */
-
-/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝middleグリッド＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 /* productとprofileの間（profileのタイトル画像） */
 #profile_top {
@@ -1094,15 +1081,15 @@ profile
 
 
 /*
-Profile
+PROFILE
 ================================================ */
 #profile {
     padding: 4rem 1rem;
 }
 
-
-/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝skillグリッド＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-
+/*
+PROFILE スキル
+================================================ */
 #skill {
     padding: 4rem 1rem;
     margin-bottom: -5rem;
@@ -1116,14 +1103,12 @@ Profile
 
 }
 
-
 .skill_box {
     /* background-color: #f2f4f8c8; */
-    background-color: rgba(255, 255, 255, 0.914);
+    background-color: var(--white-a);
     width: 250px;
     height: 350px;
 }
-
 
 /* グレーの線 */
 .img_skill {
@@ -1145,7 +1130,6 @@ Profile
 
 
 /* 文章 */
-
 .skill_sentence {
     /* 中央揃え */
     margin: auto;
@@ -1154,23 +1138,21 @@ Profile
     width: 90%;
 }
 
-
 .skill_4 {
     /* grid-area: skill_4; */
     /* background-color: #f2f4f8c8; */
-    background-color: rgba(255, 255, 255, 0.914);
+    background-color: var(--white-a);
 }
 
 .skill_5 {
     /* grid-area: skill_5; */
     /* background-color: #f2f4f8c8; */
-    background-color: rgba(255, 255, 255, 0.914);
+    background-color: var(--white-a);
 }
 
-/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝skillグリッド＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-
-
-
+/*
+PROFILE プロフィール
+================================================ */
 .profile-list1 {
     display: flex;
     align-items: flex-start;
@@ -1183,7 +1165,7 @@ Profile
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.914);
+    background-color: var(--white-a);
 }
 
 .profile-list1>profile-sentence {
@@ -1228,7 +1210,6 @@ Profile
     text-align: left;
 }
 
-
 .profile-list2 {
     display: flex;
     padding-top: 3rem;
@@ -1236,7 +1217,7 @@ Profile
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.914);
+    background-color: var(--white-a);
 }
 
 .profile-list2>profile-sentence {
@@ -1255,8 +1236,8 @@ Profile
 
 #profile h1 {
     /* background: linear-gradient(var(--light-blue), var(--blue)); */
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    -webkit-text-fill-color: var(--black);
+    /* text-fill-color: var(--black); */
 }
 
 #profile h2,
@@ -1326,7 +1307,7 @@ Profile
 /* ============================================================================================= */
 
 /*
-contact
+CONTACT
 ================================================ */
 #contact {
     background-image: linear-gradient(var(--blue), var(--blue));
@@ -1364,11 +1345,14 @@ contact
     margin-top: 1rem;
 }
 
-/*
-FOOTER
-================================================ */
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       FOOTER                                              = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
 .footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, .6);
     padding-top: 2rem;
     text-align: center;
     font-size: .875rem;
@@ -1379,6 +1363,13 @@ FOOTER
     text-decoration: underline;
 }
 
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @                                                                    @ */
+/* @                               @media                               @ */
+/* @                                                                    @ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 /*
 DESKTOP SIZE ＜PC＞
@@ -1462,9 +1453,6 @@ DESKTOP SIZE ＜PC＞
     #top_2 {
         display: none;
     }
-
-
-
 }
 
 /*
@@ -1488,10 +1476,49 @@ DESKTOP SIZE ＜SM＞
 
 }
 
+/* 
+
+@media (min-width: 600px) {
+
+    .shige_sm {
+        display: none;
+    }
+
+    .shige_mini {
+        display: none;
+    }
+
+}
+
+@media (max-width: 599px) and (min-width: 360px) {
+
+    .shige_pc {
+        display: none;
+    }
+
+    .shige_mini {
+        display: none;
+    }
+
+}
+
+@media (max-width: 359px) {
+
+    .shige_pc {
+        display: none;
+    }
+
+    .shige_sm {
+        display: none;
+    }
+
+}  */
+
 /*
-DESKTOP SIZE ＜mini_SM＞
+DESKTOP SIZE ＜PROFILE＞
 ================================================ */
 
+/* 自己紹介文改行 */
 @media (min-width: 600px) {
 
     .shige_sm {
@@ -1528,50 +1555,7 @@ DESKTOP SIZE ＜mini_SM＞
 
 }
 
-/*
-DESKTOP SIZE ＜mini_SM＞
-================================================ */
-
-@media (min-width: 600px) {
-
-    .shige_sm {
-        display: none;
-    }
-
-    .shige_mini {
-        display: none;
-    }
-
-}
-
-@media (max-width: 599px) and (min-width: 360px) {
-
-    .shige_pc {
-        display: none;
-    }
-
-    .shige_mini {
-        display: none;
-    }
-
-}
-
-@media (max-width: 359px) {
-
-    .shige_pc {
-        display: none;
-    }
-
-    .shige_sm {
-        display: none;
-    }
-
-}
-
-/*
-DESKTOP SIZE ＜mini_SM＞
-================================================ */
-
+/* 趣味グリッド改行 */
 @media (max-width: 434px) {
 
     .pro_br {
@@ -1579,14 +1563,3 @@ DESKTOP SIZE ＜mini_SM＞
     }
 
 }
-
-
-/*
-hoddy br ＜SM＞
-================================================ */
-/* @media (max-width: 467px) {
-
-    .hobby_br {
-        display: none;
-    }
-} */
