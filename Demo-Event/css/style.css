@@ -4,27 +4,19 @@
 COLORS
 =============================================== */
 :root {
-    /* --light-blue: #4db1ec; */
     --blue: #1665cc;
-    /* --purple: #b473bf; */
-    /* --pink: #ffb2c1; */
-    /* --orange: #ff9f67; */
-    /* --yellow: #ffd673; */
     --yellow: #eef929;
-    /* --light-green: #a2e29b; */
-    /* --green: #00a2af; */
     --grey: #333;
     --black: rgba(255, 255, 255, 0);
     --white: #fff;
     --white-a: rgba(255, 255, 255, 0.914);
-    /* --k_yellow: #eef929; */
 }
 
 /*
 GENERAL STYLING
 ================================================ */
 html {
-    /* 1rem = 100pxと定義 */
+    /* 1rem = 100px定義 */
     font-size: 100%;
     /* スムーズスクロール */
     scroll-behavior: smooth;
@@ -50,7 +42,6 @@ body::before {
     background-image: url(images/home_back.jpg);
     background-size: cover;
 }
-
 
 
 /*
@@ -102,7 +93,6 @@ COMMON
 p {
     line-height: 1.7;
     text-align: center;
-    /* font-family: 'BIZUDPGothic-Regular', sans-serif; */
     font-family: 'BIZUDPGothic-Regular', sans-serif;
 }
 
@@ -120,7 +110,6 @@ h2 {
     font-size: 5rem;
     margin-bottom: 1rem;
     font-family: 'BIZUDPGothic-Bold', sans-serif;
-    /* color: #efefef; */
 }
 
 h3 {
@@ -137,7 +126,6 @@ a:hover {
     color: var(--blue);
 }
 
-/* 中央配置　*/
 h1,
 h2,
 h3 {
@@ -157,13 +145,13 @@ h3 {
     position: fixed;
     width: 100px;
     height: 100px;
-    /* border-radius: 8px; */
     bottom: 100px;
     right: 100px;
     cursor: pointer;
     opacity: 75%;
     z-index: 1000;
 }
+
 .btn-menu {
     display: none;
 }
@@ -218,7 +206,6 @@ h3 {
 
 
 #loading {
-    /* 画面一杯にローディング画面を広げる */
     height: 100%;
     width: 100%;
     background: #fff;
@@ -226,7 +213,6 @@ h3 {
     top: 0px;
     left: 0px;
     z-index: 100;
-    /* flexboxを使ってローディングアイコンを画面の中央に寄せる */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -301,11 +287,10 @@ FADE
 
 
 .tate {
-    /*以下縦書きの設定*/
+    /*縦書きの設定*/
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    /*幅と高さを指定*/
     width: 100%;
     height: 150px;
 }
@@ -345,8 +330,6 @@ FADE
 /* home */
 .top-home {
     width: 30vh;
-    /* width: 100%; */
-    /* height: auto; */
     display: inline-block;
     transform: rotate(0deg);
     position: absolute;
@@ -363,8 +346,6 @@ FADE
 /* product */
 .top-product {
     width: 40vh;
-    /* width: 80%; */
-    /* height: auto; */
     display: inline-block;
     transform: rotate(-5deg);
     position: absolute;
@@ -382,8 +363,6 @@ FADE
 /* profile */
 .top-profile {
     width: 35vh;
-    /* width: 100%; */
-    /* height: auto; */
     display: inline-block;
     transform: rotate(5deg);
     position: absolute;
@@ -415,10 +394,8 @@ FADE
 .top_nav li {
     width: 180px;
     text-align: center;
-    /* background-color: #1665cc; */
     height: 50px;
     line-height: 50px;
-    /* margin-right: 2px; */
 }
 
 .top_nav_product {
@@ -433,10 +410,8 @@ FADE
 .top_nav_product li {
     width: 100%;
     text-align: center;
-    /* background-color: #1665cc; */
     height: 50px;
     line-height: 50px;
-    /* margin-right: 2px; */
 }
 
 .top_nav li a,
@@ -444,7 +419,6 @@ FADE
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    /* padding: 20px; */
     display: block;
 }
 
@@ -484,9 +458,7 @@ FADE
 
 /* SM版ミニタイトル */
 .sm_title_portfolio {
-    /* ポトフォのタイトル文字 */
     text-align: right;
-    /* font-size: 100px; */
     font-size: 6vh;
     color: var(--white);
     line-height: 1.0;
@@ -496,19 +468,13 @@ FADE
     position: absolute;
     top: 13%;
     left: 20%;
-    /* height: 100px; */
-    /* -webkit-writing-mode:vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl; */
-
 }
 
 .tate {
-    /*以下縦書きの設定*/
+    /*縦書きの設定*/
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    /*幅と高さを指定*/
     width: 100%;
     height: 150px;
 }
@@ -693,7 +659,7 @@ button {
     flex-direction: column;
     position: fixed;
     /* メニューの位置マイナス指定で画面外に */
-    /* 一覧がにゅっと出る方向 */
+    /* 一覧が出る方向 */
     top: 10%;
     left: -40%;
     width: 40%;
@@ -719,7 +685,6 @@ button {
 
 .menu-list:hover {
     background-color: #eef929;
-    /* color: #eef929; */
     cursor: pointer;
     transition: .3s;
 }
@@ -747,7 +712,6 @@ button {
 
 #product_top {
     padding: 5em 0 5em 0;
-    /* 上 | 右 | 下 | 左 */
     text-align: center;
     margin-bottom: -5rem;
 }
@@ -789,7 +753,6 @@ PRODUCT
 
 #product {
     padding: 4rem 1rem;
-    /* background-color: rgba(255, 255, 255, 0.914); */
 }
 
 #product h1 {
@@ -798,7 +761,6 @@ PRODUCT
 
 #product h2 {
     font-size: 1.8rem;
-    /* background-color: rgba(255, 255, 255, 0.914); */
     margin-bottom: 0rem;
 }
 
@@ -830,16 +792,10 @@ PRODUCT
 }
 
 .prd_box {
-    /* background-color: rgba(255, 255, 255, 0.914); */
     width: 100%;
     min-width: 300px;
     height: 50%;
     padding: 2rem 3rem;
-    /* text-align: center; */
-}
-
-.prd_box>p {
-    /* font-size: 100px; */
 }
 
 .prd_box_title {
@@ -856,23 +812,11 @@ PRODUCT
     margin-top: 10px;
     width: 100%;
     text-align: center;
-    /* height: 150px; */
 }
 
-/* 文章 */
-/* .prd_sentence {
-    中央揃え
-    margin: auto;
-    position: relative;
-    文字と画像の間
-    margin-top: 30px;
-    width: 90%;
-    font-size: 1.5rem;
-} */
 
 /* ui画像 */
 .prd_ui_box {
-    /* background-color: rgba(255, 255, 255, 0.914); */
     width: 50%;
     min-width: 300px;
     padding: 2rem 3rem;
@@ -889,7 +833,6 @@ PRODUCT
 
 /* moreボタン */
 .more_btn {
-    /* background-color: rgba(255, 255, 255, 0.914); */
     color: #1665cc;
 }
 
@@ -943,9 +886,6 @@ PRODUCT タブ
     margin: 80px auto;
     padding: 0 1rem;
 
-    /* 元 */
-    /* width: 800px;
-    margin: 80px auto; */
 }
 
 input[type="radio"] {
@@ -979,12 +919,10 @@ input[type="radio"] {
 
 .panel_area {
     margin-top: 50px;
-    /* background: #fff; */
 }
 
 .tab_panel {
     width: 100%;
-    /* padding: 80px 0; */
 
     display: none;
     text-align: center;
@@ -1043,7 +981,6 @@ input[type="radio"] {
 /* productとprofileの間（profileのタイトル画像） */
 #profile_top {
     padding: 5em 0 5em 0;
-    /* 上 | 右 | 下 | 左 */
     text-align: center;
     margin-bottom: -5rem;
 }
@@ -1051,7 +988,6 @@ input[type="radio"] {
 /* プロフィールシール */
 .img_profile {
     position: relative;
-    /* 斜め */
     transform: rotate(-15deg)
 }
 
@@ -1125,7 +1061,6 @@ PROFILE スキル
     position: relative;
     margin-top: 10px;
     width: 60%;
-    /* height: 150px; */
 }
 
 
@@ -1139,14 +1074,10 @@ PROFILE スキル
 }
 
 .skill_4 {
-    /* grid-area: skill_4; */
-    /* background-color: #f2f4f8c8; */
     background-color: var(--white-a);
 }
 
 .skill_5 {
-    /* grid-area: skill_5; */
-    /* background-color: #f2f4f8c8; */
     background-color: var(--white-a);
 }
 
@@ -1157,10 +1088,6 @@ PROFILE プロフィール
     display: flex;
     align-items: flex-start;
     margin-top: 6rem;
-    /* margin-bottom: 10rem; */
-    /* padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 5rem; */
     padding: 2rem 1rem;
     text-align: center;
     flex-wrap: wrap;
@@ -1202,7 +1129,6 @@ PROFILE プロフィール
 .profile-sentence>p {
     display: flex;
     margin-top: 10px;
-    /* gap: 60px; */
     justify-content: center;
     flex-wrap: wrap;
     color: rgb(0, 0, 0);
@@ -1226,18 +1152,14 @@ PROFILE プロフィール
 }
 
 .profile_box2 {
-    /* background-color: #f2f4f8c8; */
     padding: 0 20px;
     width: 300px;
     margin-bottom: 30px;
-    /* height: 350px; */
 }
 
 
 #profile h1 {
-    /* background: linear-gradient(var(--light-blue), var(--blue)); */
     -webkit-text-fill-color: var(--black);
-    /* text-fill-color: var(--black); */
 }
 
 #profile h2,
@@ -1475,44 +1397,6 @@ DESKTOP SIZE ＜SM＞
     }
 
 }
-
-/* 
-
-@media (min-width: 600px) {
-
-    .shige_sm {
-        display: none;
-    }
-
-    .shige_mini {
-        display: none;
-    }
-
-}
-
-@media (max-width: 599px) and (min-width: 360px) {
-
-    .shige_pc {
-        display: none;
-    }
-
-    .shige_mini {
-        display: none;
-    }
-
-}
-
-@media (max-width: 359px) {
-
-    .shige_pc {
-        display: none;
-    }
-
-    .shige_sm {
-        display: none;
-    }
-
-}  */
 
 /*
 DESKTOP SIZE ＜PROFILE＞
