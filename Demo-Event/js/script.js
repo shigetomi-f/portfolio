@@ -97,15 +97,18 @@ window.onload = function () {
   sendmail.onclick = function () {
 
     // txtData = document.getElementById('txt_data').value;
-    email = document.getElementById('email').value;
     // txt = document.getElementById('txt').value;
+    // email = document.getElementById('email').value;
+    subject = document.getElementById('subject').value;
 
-    address = email;
-    subject = '';
+
+    address = 'fmilk.xyam@gmail.com';
+    subject = subject;
     // body = txt;
 
     // location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
     location.href = 'mailto:' + address + '?subject=' + subject ;
+    // location.href = 'mailto:' + '?subject=' + subject ;
 
   };
 
