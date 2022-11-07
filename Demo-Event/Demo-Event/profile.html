@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQueryのCDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- 画像クリックで拡大画像をポップアップ表示(lightbox) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+        type="text/javascript"></script>
+
+</head>
+
+<!-- スクロールトップボタン -->
+<div id="js-pagetop">
+    <img src="images/UP_B.png">
+</div>
+<!-- 下の行がないとスクロールボタンが消えてくれません涙 -->
+<button class="btn-menu"></button>
+
+<body>
+
+    <!-- ************************************************************************************* -->
+    <!-- *                                                                                   * -->
+    <!-- *                                      HOME                                         * -->
+    <!-- *                                                                                   * -->
+    <!-- ************************************************************************************* -->
+
+    <header>
+    </header>
+
+    <!-- home トップの画像。タイトル、説明文字 -->
+    <section id="top_product">
+
+
+        <!-- PC版横並びメニューナビ -->
+        <div class="sm_display_none">
+            <ul class="top_nav_product">
+                <li><a href="index.html#">HOME</a></li>
+                <li><a href="product.html#">PRODUCT</a></li>
+                <li><a href="profile.html#">PROFILE</a></li>
+            </ul>
+        </div>
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <title>Document</title>
+        </head>
+
+        <body>
+            <button type="button" class="sm_nav js-sm_nav">
+                <span class="sm_nav-line"></span>
+            </button>
+            <nav>
+                <ul class="menu">
+                    <li class="menu-list"><a href="index.html#">HOME</a> </li>
+                    <li class="menu-list"><a href="product.html#product">PRODUCT</a> </li>
+                    <li class="menu-list"><a href="profile.html#profile">PROFILE</a> </li>
+                </ul>
+            </nav>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="script.js"></script>
+        </body>
+
+
+    </section>
+
+
+    <!-- ************************************************************************************* -->
+    <!-- *                                                                                   * -->
+    <!-- *                                     PROFILE                                       * -->
+    <!-- *                                                                                   * -->
+    <!-- ************************************************************************************* -->
+
+
+    <section id="profile_top">
+        <div class="img_profile"><img src="images/homeB_profile.png" alt="profile_b"></div>
+        <h1>profile</h1>
+    </section>
+
+
+    <!-- ************************************************************************************* -->
+    <!-- *                                      skill                                        * -->
+    <!-- ************************************************************************************* -->
+
+    <section id="skill" class="wrapper">
+
+        <h2>習得スキル</h2>
+
+        <div class="gridA">
+            <div class="skill_box fade-in fade-in-up">
+
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill1.PNG" alt=""></div>
+                <p class="skill_sentence">Illustratorの基本操作を習得しています。
+                    Illustratorを使用したロゴや文字装飾、アイコンなどの作成が可能です。</p>
+            </div>
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill2.PNG" alt=""></div>
+                <p class="skill_sentence">photoshopの基本操作を習得しています。
+                    photoshopを使用した写真の加工や補正、切り抜きなどの編集が可能です。</p>
+            </div>
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill3.PNG" alt=""></div>
+                <p class="skill_sentence">Adobe XDの基本操作を習得しています。
+                    Adobe XDを使用した簡単なwebデザインの制作が可能です。
+                </p>
+            </div>
+
+        </div>
+        <br>
+        <div class="gridA">
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill4.PNG" alt=""></div>
+                <p class="skill_sentence">フロント側の改修案件を担当した経験があります。基本的なコーディングが可能です。</p>
+            </div>
+            <div class="skill_box fade-in fade-in-up">
+                <div class="img_skill"></div>
+                <div class="img_skill_position"><img src="images/skill5.PNG" alt=""></div>
+                <p class="skill_sentence">jqueryの基礎を学習しています。jqueryを使用した基本的なコーディングが可能です。</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ************************************************************************************* -->
+    <!-- *                                      自己紹介                                         * -->
+    <!-- ************************************************************************************* -->
+
+
+    <section id="profile" class="wrapper">
+        <div class="profile-list1">
+            <div class="profile_box1 profile-sentence">
+                <div class="shige_pc">
+                    <h2>こんにちは。”しげとみ” と申します。</h2>
+                </div>
+                <div class="shige_sm">
+                    <h2>こんにちは。”しげとみ” <br>と申します。</h2>
+                </div>
+                <div class="shige_mini">
+                    <h2>こんにちは。<br>”しげとみ” <br>と申します。</h2>
+                </div>
+                <h3>HOBBY<br></h3>
+                <img src="images/pro1.png" alt="bike">
+                <img src="images/pro2.png" alt="run">
+                <img src="images/pro3.png" alt="camp">
+                <div class="pro_br">
+                    <br>
+                </div>
+                <img src="images/pro4.png" alt="party">
+                <img src="images/pro5.png" alt="art">
+                <img src="images/pro6.png" alt="camp">
+
+                <p>
+                    以前は、音楽フェスや海外旅行などによく行ってましたが、
+                    <!-- <div class="hobby_br"><br><div> -->
+                    コロナになってからは自然をよく満喫するようになりました。
+                </p>
+            </div>
+            <img src="images/mie.jpg" alt="mie">
+        </div>
+        <!-- ************************************************************************************* -->
+        <!-- *                                      職歴                                         * -->
+        <!-- ************************************************************************************* -->
+
+        <div class="profile-list2">
+            <!-- <h2>Miechi</h2> -->
+            <div class="profile_box2 profile-sentence">
+                <span class="circle">
+                    2018-
+                </span>
+                <span class="circle_sentence">
+                    <span>放送系システム<br>システム開発<br></span>
+                    主な担当業務：<br>
+                    システム開発、保守<br>
+                    <li>Java、SQL、html、css</li><br>
+                </span>
+            </div>
+            <br>
+            <div class="profile_box2 profile-sentence">
+                <span class="circle">
+                    2020-
+                </span>
+                <span class="circle_sentence">
+                    <span> 放送系システム<br>システム移行<br></span>
+                    主な担当業務：<br>
+                    GCP環境構築、移行業務<br>
+                    <li>GCP、Linux、bash、進捗関連管理</li><br>
+                </span>
+            </div>
+            <br>
+            <div class="profile_box2 profile-sentence">
+                <span class="circle">
+                    2022-
+                </span>
+                <span class="circle_sentence">
+                    <span>銀行系システム<br>基盤構築<br></span>
+                    主な担当業務：<br>
+                    オンプレミス環境構築<br>
+                    <li>HPUX、Linux、OracleDB、bash</li><br>
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ************************************************************************************* -->
+    <!-- *                                                                                   * -->
+    <!-- *                                     CONTACT                                       * -->
+    <!-- *                                                                                   * -->
+    <!-- ************************************************************************************* -->
+
+    <section id="contact">
+        <h1>contact</h1>
+
+        <form class="contact-form" action="#">
+            <label>Email</label>
+            <input class="contact-field" type="subject" id='subject' placeholder="例：◯◯について問い合わせ">
+            <!-- <input class="contact-field" type="email" id='email' placeholder="例：sample@example.com"> -->
+            <label>Inquiry Contact</label>
+            <!-- <input class="contact-field" type="text" id='txt' placeholder="お問い合わせ内容"> -->
+            <input class="contact-btn" type="submit" value="Submit" id='mail_btn'>
+        </form>
+
+
+        <div class="footer wrapper">
+            <p>
+                <small>&copy; 2022 </small>
+            </p>
+        </div>
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

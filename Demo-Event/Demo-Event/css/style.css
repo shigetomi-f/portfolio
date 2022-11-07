@@ -1,0 +1,1450 @@
+@charset 'UTF-8';
+
+/*
+COLORS
+=============================================== */
+:root {
+    --blue: #1665cc;
+    --yellow: #eef929;
+    --grey: #333;
+    --black: rgba(255, 255, 255, 0);
+    --white: #fff;
+    --white-a: rgba(255, 255, 255, 0.914);
+}
+
+/*
+GENERAL STYLING
+================================================ */
+html {
+    /* 1rem = 100px定義 */
+    font-size: 100%;
+    /* スムーズスクロール */
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--gray);
+    font-family: sans-serif;
+}
+
+/* スマホでも背景固定 */
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-image: url(images/home_back.jpg);
+    background-size: cover;
+}
+
+
+/*
+font-face
+================================================ */
+
+@font-face {
+    font-family: 'BIZUDPGothic-Regular';
+    src: url('../font/BIZUDPGothic-Regular.eot');
+    src: url('../font/BIZUDPGothic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/BIZUDPGothic-Regular.svg#BIZUDPGothic-Regular') format('svg'),
+        url('../font/BIZUDPGothic-Regular.ttf') format('truetype'),
+        url('../font/BIZUDPGothic-Regular.woff') format('woff'),
+        url("../font/BIZUDPGothic-Regular.otf") format("truetype"),
+        url('../font/BIZUDPGothic-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BIZUDPGothic-Bold';
+    src: url('../font/BIZUDPGothic-Bold.eot');
+    src: url('../font/BIZUDPGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/BIZUDPGothic-Bold.svg#BIZUDPGothic-Bold') format('svg'),
+        url('../font/BIZUDPGothic-Bold.ttf') format('truetype'),
+        url('../font/BIZUDPGothic-Bold.woff') format('woff'),
+        url("../font/BIZUDPGothic-Bold.otf") format("truetype"),
+        url('../font/BIZUDPGothic-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutro';
+    src: url('../font/NeutroBold.eot');
+    src: url('../font/NeutroBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeutroBold.svg#NeutroBold') format('svg'),
+        url('../font/NeutroBold.ttf') format('truetype'),
+        url('../font/NeutroBold.woff') format('woff'),
+        url("../font/NeutroBold.otf") format("truetype"),
+        url('../font/NeutroBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+COMMON
+================================================ */
+p {
+    line-height: 1.7;
+    text-align: center;
+    font-family: 'BIZUDPGothic-Regular', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Neutro', sans-serif;
+}
+
+h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-family: 'BIZUDPGothic-Bold', sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'BIZUDPGothic-Bold', sans-serif;
+}
+
+a {
+    transition: .3s;
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+/* Layout  画面のオブジェクトが広がるマックスサイズ＝wrapper　*/
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* スクロールアップボタン */
+#js-pagetop {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 100px;
+    right: 100px;
+    cursor: pointer;
+    opacity: 75%;
+    z-index: 1000;
+}
+
+.btn-menu {
+    display: none;
+}
+
+@media (max-width: 599px) {
+    #js-pagetop {
+        width: 50px;
+        bottom: 20px;
+        left: 50%;
+        margin: 0px 0px 0px -25px;
+    }
+}
+
+/*
+ローデイング画面
+================================================ */
+.loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading.is-active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-animation {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-animation.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#loading {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+/*
+FADE
+================================================ */
+/* jqueryのフェードイン */
+/* スクロールCSS */
+.fade-in {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+}
+
+/* アニメーションをつけたいタグのclassに class="fade-in fade-in-up"で下から上 */
+.fade-in-up {
+    transform: translate(0, 50px);
+}
+
+/* アニメーションをつけたいタグのclassに class="fade-in fade-in-down"で上から下 */
+.fade-in-down {
+    transform: translate(0, -50px);
+}
+
+/* アニメーションをつけたいタグのclassに class="fade-in fade-in-down"で右から左 */
+.fade-in-left {
+    transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+    transform: translate(50px, 0);
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                      【PC】 HOME                                           = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+
+#top {
+    background-image: url('../images/home_back.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    animation: bg-color 24s infinite;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    border: 60px solid white;
+}
+
+
+
+.tate {
+    /*縦書きの設定*/
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    width: 100%;
+    height: 150px;
+}
+
+/* PC版長タイトル */
+.pc_title_portfolio {
+    /* ポトフォのタイトル文字 */
+    text-align: left;
+    /* font-size: 100px; */
+    font-size: 10vh;
+    color: var(--white);
+    line-height: 1.0;
+    overflow: hidden;
+    z-index: 100;
+    font-family: 'Neutro', sans-serif;
+    position: absolute;
+    top: 13%;
+    right: 5%;
+}
+
+
+.span_yellow {
+    color: var(--blue);
+    transition: .3s;
+
+}
+
+.pc_title_portfolio:hover>.span_yellow,
+.sm_title_portfolio:hover>.span_yellow {
+    color: var(--yellow);
+}
+
+/*
+【PC】HOME PC用ジャンプステッカー
+================================================ */
+
+/* home */
+.top-home {
+    width: 30vh;
+    display: inline-block;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    z-index: 10;
+}
+
+.top-home:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2);
+}
+
+/* product */
+.top-product {
+    width: 40vh;
+    display: inline-block;
+    transform: rotate(-5deg);
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    z-index: 10;
+}
+
+.top-product:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2) rotate(-5deg);
+}
+
+
+/* profile */
+.top-profile {
+    width: 35vh;
+    display: inline-block;
+    transform: rotate(5deg);
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    z-index: 10;
+}
+
+.top-profile:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2) rotate(5deg);
+}
+
+/*
+【PC】HOME PC用メニューボタン（横並び）
+================================================ */
+
+
+.top_nav {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    z-index: 20;
+    background-color: #1665cc;
+}
+
+.top_nav li {
+    width: 180px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.top_nav_product {
+    list-style: none;
+    display: flex;
+    z-index: 20;
+    justify-content: center;
+    background-color: #1665cc;
+}
+
+
+.top_nav_product li {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.top_nav li a,
+.top_nav_product li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+}
+
+.top_nav li:hover,
+.top_nav_product li:hover {
+    background-color: #eef929;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.top_nav li:hover a,
+.top_nav_product li:hover a {
+    color: var(--blue);
+}
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                      【SM】 HOME                                           = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+#top_2 {
+    background-image: url('../images/home_back_sm.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    animation: bg-color 24s infinite;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    border: 45px solid white;
+}
+
+
+/* SM版ミニタイトル */
+.sm_title_portfolio {
+    text-align: right;
+    font-size: 6vh;
+    color: var(--white);
+    line-height: 1.0;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Neutro', sans-serif;
+    position: absolute;
+    top: 13%;
+    left: 20%;
+}
+
+.tate {
+    /*縦書きの設定*/
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    width: 100%;
+    height: 150px;
+}
+
+
+.span_yellow {
+    color: var(--blue);
+    transition: .3s;
+
+}
+
+.pc_title_portfolio:hover>.span_yellow,
+.sm_title_portfolio:hover>.span_yellow {
+    color: var(--yellow);
+}
+
+
+/*
+【SM】HOME SM用ジャンプステッカー
+================================================ */
+
+
+/* home */
+.sm_top-home {
+    width: 20vh;
+    display: inline-block;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+
+.sm_top-home:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2);
+}
+
+/* product */
+.sm_top-product {
+    width: 18vh;
+    display: inline-block;
+    transform: rotate(-5deg);
+    position: absolute;
+    top: 70%;
+    right: 40%;
+}
+
+.sm_top-product:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2) rotate(-5deg);
+}
+
+
+/* profile */
+.sm_top-profile {
+    width: 20vh;
+    display: inline-block;
+    transform: rotate(5deg);
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+.sm_top-profile:hover {
+    transition: .5s;
+    transform: scale(1.2, 1.2) rotate(5deg);
+}
+
+
+/*
+【SM】HOME SM用メニューボタン（縦並び）
+================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: var(--black);
+    color: inherit;
+    vertical-align: middle;
+    text-align: inherit;
+    font: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/**************** 以下、ハンバーガーボタンのスタイリング ****************/
+.sm_nav {
+    /* ボタンの配置位置  */
+    position: absolute;
+    top: 32px;
+    /* right: 16px; */
+    left: 16px;
+    /* 最前面に */
+    z-index: 10;
+    /* ボタンの大きさ  */
+    width: 48px;
+    height: 48px;
+    background-color: #1665cc;
+    /* ボタンの角の丸さ */
+    border-radius: 30px;
+
+}
+
+/***** 真ん中のバーガー線 *****/
+.sm_nav-line {
+    display: block;
+    /* バーガー線の位置基準として設定 */
+    position: relative;
+    /* 線の長さと高さ */
+    width: 30%;
+    height: 4px;
+    left: 17px;
+    /* バーガー線の色 */
+    background-color: #fff;
+    transition: .2s;
+
+}
+
+/***** 上下のバーガー線 *****/
+.sm_nav-line::before,
+.sm_nav-line::after {
+    content: "";
+    /* 基準線と同じ大きさと色 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.sm_nav-line::before {
+    /* 上の線の位置 */
+    transform: translateY(-16px);
+}
+
+.sm_nav-line::after {
+    /* 下の線の位置 */
+    transform: translateY(16px);
+}
+
+/***** メニューオープン時 *****/
+.sm_nav-line.open {
+    /* 真ん中の線を透明に */
+    background-color: var(--black);
+}
+
+.sm_nav-line.open::before,
+.sm_nav-line.open::after {
+    content: "";
+    background-color: rgb(255, 250, 250);
+    transition: .2s;
+}
+
+.sm_nav-line.open::before {
+    /* 上の線を傾ける */
+    transform: rotate(45deg);
+}
+
+.sm_nav-line.open::after {
+    /* 上の線を傾ける */
+    transform: rotate(-45deg);
+}
+
+/**************** 以下、縦メニューのスタイリング ****************/
+.menu {
+    /* メニューを縦に */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* メニューの位置マイナス指定で画面外に */
+    /* 一覧が出る方向 */
+    top: 10%;
+    left: -40%;
+    width: 40%;
+    height: 40vh;
+    background-color: #1665cc;
+    color: #efefef;
+    transition: .3s;
+    z-index: 50;
+}
+
+.menu-list {
+    /* メニューテキスト位置をリスト内中心に */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-list a {
+    display: block;
+}
+
+.menu-list:hover {
+    background-color: #eef929;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menu-list:hover a {
+    color: var(--blue);
+}
+
+/* メニュー一覧配置 */
+.menu.open {
+    position: absolute;
+    /* 一覧の位置 */
+    left: 0;
+    top: 20%;
+}
+
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       PRODUCT                                             = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+#product_top {
+    padding: 5em 0 5em 0;
+    text-align: center;
+    margin-bottom: -5rem;
+}
+
+/* プロダクトシール */
+.img_product {
+    position: relative;
+    /* 角度 */
+    transform: rotate(-15deg)
+}
+
+@media (min-width: 1600px) {
+    .img_product {
+        width: 150px;
+        top: 50px;
+        left: 25%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1599px) {
+    .img_product {
+        width: 150px;
+        top: 10px;
+        left: 25%;
+    }
+}
+
+@media (max-width: 599px) {
+    .img_product {
+        width: 100px;
+        top: 10px;
+        left: 20%;
+    }
+}
+
+/*
+PRODUCT
+================================================ */
+
+#product {
+    padding: 4rem 1rem;
+}
+
+#product h1 {
+    margin-bottom: 2rem;
+}
+
+#product h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0rem;
+}
+
+#product p {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#product span {
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 0.7rem;
+
+}
+
+.product_background {
+    background-color: var(--white-a);
+
+}
+
+/* 枠 */
+.prd_flex {
+    display: flex;
+    /* gap: 15px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0rem 5rem;
+}
+
+.prd_box {
+    width: 100%;
+    min-width: 300px;
+    height: 50%;
+    padding: 2rem 3rem;
+}
+
+.prd_box_title {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 2%;
+}
+
+/* webサイト画像 */
+.img_web_position {
+    margin: auto;
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* ui画像 */
+.prd_ui_box {
+    width: 50%;
+    min-width: 300px;
+    padding: 2rem 3rem;
+}
+
+.img_ui_position {
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+/* moreボタン */
+.more_btn {
+    color: #1665cc;
+}
+
+.btn-coler.btn-cubic {
+    border-bottom: 5px solid #0e4183;
+    color: #ffffff;
+
+}
+
+.btn-coler.btn-cubic:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid #0e4183;
+    color: rgb(160, 178, 216);
+
+}
+
+.btn-radius {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #1665cc;
+    border-radius: 80vh;
+}
+
+.fa-position-right {
+    position: absolute;
+    top: calc(50% - .5em);
+    right: 1rem;
+}
+
+
+
+/*
+PRODUCT タブ
+================================================ */
+
+/* タブ切り替え */
+@keyframes tabAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tab_wrap {
+    max-width: 950px;
+    width: 100%;
+    margin: 80px auto;
+    padding: 0 1rem;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab_area {
+    font-size: 0;
+    margin: 0 10px;
+    text-align: center;
+
+}
+
+.tab_area label {
+    width: 200px;
+    margin: 10px 30px;
+    display: inline-block;
+    padding: 12px 0;
+    color: #1665cc;
+    background: #ddd;
+    text-align: center;
+    font-size: 23px;
+    cursor: pointer;
+    transition: ease 0.2s opacity;
+    border-radius: 10px;
+}
+
+.tab_area label:hover {
+    opacity: 0.5;
+}
+
+.panel_area {
+    margin-top: 50px;
+}
+
+.tab_panel {
+    width: 100%;
+
+    display: none;
+    text-align: center;
+
+}
+
+.tab_panel p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+#tab1:checked~.tab_area .tab1_label {
+    background: #1665cc;
+    color: #fff;
+}
+
+#tab1:checked~.panel_area #panel1 {
+    display: block;
+    animation: tabAnim ease 0.6s forwards;
+    -ms-animation: tabAnim ease 0.6s forwards;
+}
+
+#tab2:checked~.tab_area .tab2_label {
+    background: #1665cc;
+    color: #fff;
+}
+
+#tab2:checked~.panel_area #panel2 {
+    display: block;
+    animation: tabAnim ease 0.6s forwards;
+    -ms-animation: tabAnim ease 0.6s forwards;
+}
+
+#tab3:checked~.tab_area .tab3_label {
+    background: #1665cc;
+    color: #fff;
+}
+
+#tab3:checked~.panel_area #panel3 {
+    display: block;
+    animation: tabAnim ease 0.6s forwards;
+    -ms-animation: tabAnim ease 0.6s forwards;
+}
+
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                         PROFILE                                           = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+
+/* productとprofileの間（profileのタイトル画像） */
+#profile_top {
+    padding: 5em 0 5em 0;
+    text-align: center;
+    margin-bottom: -5rem;
+}
+
+/* プロフィールシール */
+.img_profile {
+    position: relative;
+    transform: rotate(-15deg)
+}
+
+@media (min-width: 1600px) {
+    .img_profile {
+        width: 170px;
+        top: 50px;
+        left: 25%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1599px) {
+    .img_profile {
+        width: 170px;
+        top: 10px;
+        left: 25%;
+    }
+}
+
+@media (max-width: 599px) {
+    .img_profile {
+        width: 100px;
+        top: 10px;
+        left: 20%;
+    }
+}
+
+
+/*
+PROFILE
+================================================ */
+#profile {
+    padding: 4rem 1rem;
+}
+
+/*
+PROFILE スキル
+================================================ */
+#skill {
+    padding: 4rem 1rem;
+    margin-bottom: -5rem;
+}
+
+.gridA {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.skill_box {
+    /* background-color: #f2f4f8c8; */
+    background-color: var(--white-a);
+    width: 250px;
+    height: 350px;
+}
+
+/* グレーの線 */
+.img_skill {
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0);
+}
+
+/* 画像 */
+.img_skill_position {
+    margin: auto;
+    position: relative;
+    margin-top: 10px;
+    width: 60%;
+}
+
+
+/* 文章 */
+.skill_sentence {
+    /* 中央揃え */
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+    width: 90%;
+}
+
+.skill_4 {
+    background-color: var(--white-a);
+}
+
+.skill_5 {
+    background-color: var(--white-a);
+}
+
+/*
+PROFILE プロフィール
+================================================ */
+.profile-list1 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 6rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--white-a);
+}
+
+.profile-list1>profile-sentence {
+    margin-left: 1rem;
+    width: 300px;
+    text-align: center;
+    position: absolute;
+}
+
+.profile-list1>img {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 4rem;
+    width: 350px;
+}
+
+.profile_box1 {
+    /* background-color: #f2f4f8c8; */
+    width: 500px;
+    /* height: 300px; */
+}
+
+#profile img {
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+.profile-sentence>img {
+    width: 80px;
+    margin: 20px;
+
+}
+
+.profile-sentence>p {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: rgb(0, 0, 0);
+    font-family: 'BIZUDPGothic-Regular', sans-serif;
+    text-align: left;
+}
+
+.profile-list2 {
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--white-a);
+}
+
+.profile-list2>profile-sentence {
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.profile_box2 {
+    padding: 0 20px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+
+#profile h1 {
+    -webkit-text-fill-color: var(--black);
+}
+
+#profile h2,
+#skill h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+#profile h3 {
+    font-size: 1.2rem;
+    font-family: 'Neutro', sans-serif;
+
+}
+
+
+.circle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #1665cc;
+    border-radius: 50%;
+    margin: 0 auto;
+    /* ←円を中央揃え */
+    text-align: center;
+    /* ←文字を左右に中央揃え */
+    line-height: 100px;
+    /* ←文字を上下に中央揃え */
+    color: #fff;
+    font-family: 'Neutro', sans-serif;
+}
+
+.circle_sentence {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: rgb(0, 0, 0);
+    font-family: 'BIZUDPGothic-Regular', sans-serif;
+    text-align: left;
+}
+
+.circle_sentence>li {
+    color: #7b7b7b;
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'BIZUDPGothic-Regular', sans-serif;
+    text-align: left;
+}
+
+
+.circle_sentence>span {
+    font-size: 25px;
+    text-align: center;
+    height: 65px;
+}
+
+
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       CONTACT                                             = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+/*
+CONTACT
+================================================ */
+#contact {
+    background-image: linear-gradient(var(--blue), var(--blue));
+    padding: 6rem 1rem 2rem;
+}
+
+#contact h1 {
+    color: var(--white);
+}
+
+.contact-form {
+    max-width: 480px;
+    margin: 0 auto 5rem;
+}
+
+.contact-form label {
+    color: var(--white);
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.contact-field {
+    background: rgba(255, 255, 255, .6);
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+}
+
+.contact-btn {
+    background: var(--grey);
+    color: var(--white);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* ============================================================================================= */
+/* =                                                                                           = */
+/* =                                       FOOTER                                              = */
+/* =                                                                                           = */
+/* ============================================================================================= */
+
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: .875rem;
+    color: var(--white);
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @                                                                    @ */
+/* @                               @media                               @ */
+/* @                                                                    @ */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/*
+DESKTOP SIZE ＜PC＞
+================================================ */
+@media (min-width: 600px) {
+
+    /* Common */
+    h1 {
+        font-size: 5rem;
+    }
+
+    .contact-btn:hover {
+        transition: .3s;
+    }
+
+    .contact-btn:hover {
+        background: var(--blue);
+    }
+
+    /* Header */
+    .main-nav {
+        width: 100%;
+        position: static;
+        display: flex;
+    }
+
+    .main-nav li {
+        margin: 0 0 0 1.5rem;
+    }
+
+    /* TOP */
+    #top h1 {
+        font-size: 6.875rem;
+    }
+
+    .hero-date {
+        font-size: 3rem;
+    }
+
+    /* home */
+    .home-table td {
+        display: table-cell;
+    }
+
+    .home-date {
+        padding: 1.125rem 0 1rem 1rem;
+    }
+
+    .home-content {
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    /* profile */
+    #profile h1 {
+        margin-bottom: 4rem;
+    }
+
+    .profile-list {
+        margin-bottom: 3rem;
+    }
+
+    .profile-text {
+        margin-left: 2rem;
+    }
+
+    /* ハンバーガーボタン非表示*/
+    .sm_nav {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /* ミニタイトル非表示*/
+    .pc_display_none {
+        display: none;
+    }
+
+    /* トップ画面*/
+    #top_2 {
+        display: none;
+    }
+}
+
+/*
+DESKTOP SIZE ＜SM＞
+================================================ */
+@media (max-width: 599px) {
+
+    /* 横並びナビ非表示*/
+    .top_nav {
+        display: none;
+    }
+
+    .sm_display_none {
+        display: none;
+    }
+
+    /* トップ画面*/
+    #top {
+        display: none;
+    }
+
+}
+
+/*
+DESKTOP SIZE ＜PROFILE＞
+================================================ */
+
+/* 自己紹介文改行 */
+@media (min-width: 600px) {
+
+    .shige_sm {
+        display: none;
+    }
+
+    .shige_mini {
+        display: none;
+    }
+
+}
+
+@media (max-width: 599px) and (min-width: 360px) {
+
+    .shige_pc {
+        display: none;
+    }
+
+    .shige_mini {
+        display: none;
+    }
+
+}
+
+@media (max-width: 359px) {
+
+    .shige_pc {
+        display: none;
+    }
+
+    .shige_sm {
+        display: none;
+    }
+
+}
+
+/* 趣味グリッド改行 */
+@media (max-width: 434px) {
+
+    .pro_br {
+        display: none;
+    }
+
+}
